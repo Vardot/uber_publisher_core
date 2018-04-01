@@ -1,3 +1,4 @@
+uuid: 56c45596-c932-47b3-b9a9-7013b3936034
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,9 @@ dependencies:
     - node
     - taxonomy
     - user
+    - views_exclude_previous
+_core:
+  default_config_hash: _aflxJ285shHpXpF6bQJ5wiJnEg916jX0eNa7T6cVZ0
 id: uber_puplisher_taxonomy_term
 label: 'Uber Puplisher Taxonomy term'
 module: taxonomy
@@ -403,6 +407,45 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
+        views_exclude_previous:
+          id: views_exclude_previous
+          table: node
+          field: views_exclude_previous
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not in'
+          value:
+            node_load: node_load
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          plugin_id: views_exclude_previous
       filter_groups:
         operator: AND
         groups:
