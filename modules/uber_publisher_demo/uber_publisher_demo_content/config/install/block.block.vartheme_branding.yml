@@ -5,19 +5,22 @@ dependencies:
     - block_class
     - system
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
-id: uber_publisher_vanilla_breadcrumbs
-theme: uber_publisher_vanilla
-region: breadcrumbs
+id: vartheme_branding
+theme: vartheme
+region: branding
 weight: -5
 provider: null
-plugin: system_breadcrumb_block
+plugin: system_branding_block
 settings:
-  id: system_breadcrumb_block
-  label: Breadcrumbs
+  id: system_branding_block
+  label: 'Site branding'
   provider: system
   label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
 visibility: {  }

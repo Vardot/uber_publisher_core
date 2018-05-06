@@ -2,9 +2,9 @@ langcode: en
 status: true
 dependencies:
   theme:
-    - uber_publisher_vanilla
-id: uber_publisher_vanilla_local_tasks
-theme: uber_publisher_vanilla
+    - vartheme
+id: vartheme_local_tasks
+theme: vartheme
 region: help
 weight: -3
 provider: null

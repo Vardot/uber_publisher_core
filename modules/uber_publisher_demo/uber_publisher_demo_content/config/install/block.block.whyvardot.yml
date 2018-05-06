@@ -7,12 +7,12 @@ dependencies:
     - block_class
     - block_content
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
 id: whyvardot
-theme: uber_publisher_vanilla
+theme: vartheme
 region: footer_first
 weight: 0
 provider: null

@@ -8,12 +8,12 @@ dependencies:
     - system
     - views
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
 id: views_block__articles_promoted_splash_area
-theme: uber_publisher_vanilla
+theme: vartheme
 region: promotion
 weight: -11
 provider: null

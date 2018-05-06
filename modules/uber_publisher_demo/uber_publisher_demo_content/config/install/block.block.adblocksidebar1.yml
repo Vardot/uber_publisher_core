@@ -5,12 +5,12 @@ dependencies:
     - ads_system
     - block_class
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
 id: adblocksidebar1
-theme: uber_publisher_vanilla
+theme: vartheme
 region: sidebar_right
 weight: -8
 provider: null

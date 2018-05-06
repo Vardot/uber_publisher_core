@@ -7,12 +7,12 @@ dependencies:
     - block_class
     - views
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
 id: views_block__articles_most_viewed_articles
-theme: uber_publisher_vanilla
+theme: vartheme
 region: sidebar_right
 weight: -10
 provider: null

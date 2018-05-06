@@ -4,12 +4,12 @@ dependencies:
   module:
     - block_class
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
 id: copyright
-theme: uber_publisher_vanilla
+theme: vartheme
 region: copyright
 weight: 0
 provider: null

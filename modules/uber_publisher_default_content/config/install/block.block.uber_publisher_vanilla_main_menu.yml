@@ -7,12 +7,12 @@ dependencies:
     - block_class
     - system
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
-id: uber_publisher_vanilla_main_menu
-theme: uber_publisher_vanilla
+id: vartheme_main_menu
+theme: vartheme
 region: main_menu
 weight: -5
 provider: null

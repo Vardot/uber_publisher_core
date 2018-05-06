@@ -5,12 +5,12 @@ dependencies:
     - block_class
     - system
   theme:
-    - uber_publisher_vanilla
+    - vartheme
 third_party_settings:
   block_class:
     classes: ''
-id: uber_publisher_vanilla_branding
-theme: uber_publisher_vanilla
+id: vartheme_branding
+theme: vartheme
 region: branding
 weight: -5
 provider: null

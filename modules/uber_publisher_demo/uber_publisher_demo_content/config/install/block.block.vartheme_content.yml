@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - uber_publisher_vanilla
-id: uber_publisher_vanilla_content
-theme: uber_publisher_vanilla
+    - vartheme
+id: vartheme_content
+theme: vartheme
 region: content
 weight: -8
 provider: null

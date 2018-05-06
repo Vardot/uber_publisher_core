@@ -12,7 +12,7 @@ use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 */
 function uber_publisher_core_preprocess(&$variables, $hook) {
   // Sharerich blocks
-  $sharerich_block = \Drupal\block\Entity\Block::load('uber_publisher_vanilla_sharerich_block');
+  $sharerich_block = \Drupal\block\Entity\Block::load('vartheme_sharerich_block');
   if(isset($sharerich_block)){
     $sharerich_block_view = \Drupal::entityTypeManager()
     ->getViewBuilder('block')

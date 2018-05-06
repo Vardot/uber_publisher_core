@@ -2,12 +2,12 @@ cdn_provider: ''
 favicon:
   mimetype: image/vnd.microsoft.icon
   path: ''
-  url: 'http://localhost/dev/uber_site/docroot/profiles/uber_publisher/themes/uber_publisher_vanilla/favicon.ico'
+  url: ''
   use_default: true
 schemas:
   bootstrap: 8000
   vartheme: 8000
-  uber_publisher_vanilla: 8000
+  vartheme: 8000
 region_wells:
   branding: ''
   search: ''
