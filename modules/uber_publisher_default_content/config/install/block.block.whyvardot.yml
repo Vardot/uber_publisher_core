@@ -10,8 +10,8 @@ third_party_settings:
     classes: ''
 id: whyvardot
 theme: vartheme
-region: footer_first
-weight: 0
+region: footer
+weight: -40
 provider: null
 plugin: 'block_content:1db93226-a322-4895-adcc-a930fbe72f1a'
 settings:

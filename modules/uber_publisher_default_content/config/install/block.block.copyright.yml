@@ -10,7 +10,7 @@ third_party_settings:
     classes: ''
 id: copyright
 theme: vartheme
-region: copyright
+region: footer
 weight: 0
 provider: null
 plugin: 'block_content:73a6b18f-db52-4ea4-a041-8a7551a6763c'

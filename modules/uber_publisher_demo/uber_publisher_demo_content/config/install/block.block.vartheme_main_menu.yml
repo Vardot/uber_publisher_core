@@ -13,7 +13,7 @@ third_party_settings:
     classes: ''
 id: vartheme_main_menu
 theme: vartheme
-region: main_menu
+region: navigation_collapsible
 weight: -5
 provider: null
 plugin: 'system_menu_block:main'

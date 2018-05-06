@@ -10,8 +10,8 @@ third_party_settings:
     classes: ''
 id: contactinfo
 theme: vartheme
-region: footer_four
-weight: 0
+region: footer
+weight: -30
 provider: null
 plugin: 'block_content:e2c0123c-da98-4732-a608-987e6dd0295b'
 settings:

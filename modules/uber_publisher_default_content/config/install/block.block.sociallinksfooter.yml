@@ -10,8 +10,8 @@ third_party_settings:
     classes: ''
 id: sociallinksfooter
 theme: vartheme
-region: before_footer
-weight: 0
+region: footer
+weight: -50
 provider: null
 plugin: 'block_content:cf53556a-2447-4295-926a-bd29d13af4e7'
 settings:
