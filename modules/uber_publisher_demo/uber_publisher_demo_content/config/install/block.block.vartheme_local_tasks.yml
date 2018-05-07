@@ -5,8 +5,8 @@ dependencies:
     - vartheme
 id: vartheme_local_tasks
 theme: vartheme
-region: help
-weight: -3
+region: header
+weight: -10
 provider: null
 plugin: local_tasks_block
 settings:
