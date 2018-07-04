@@ -1,5 +1,5 @@
 name: 'Uber Publisher Demo Content'
-description: 'Demo content for uber publisher'
+description: 'Demo content for Uber publisher.'
 type: module
 core: 8.x
 dependencies:
@@ -27,5 +27,5 @@ dependencies:
   - varbase_media
   - views
   - webform
-version: 8.x-4.x-dev
+version: 8.x-5.x-dev
 package: 'Uber Publisher'

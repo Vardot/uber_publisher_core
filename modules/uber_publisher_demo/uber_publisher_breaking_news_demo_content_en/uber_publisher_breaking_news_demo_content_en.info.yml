@@ -3,6 +3,6 @@ description: 'Uber Publisher breaking news demo content for English language.'
 type: module
 core: 8.x
 package: 'Uber publisher'
-version: 8.x-4.x-dev
+version: 8.x-5.x-dev
 dependencies:
   - uber_publisher_demo_content
