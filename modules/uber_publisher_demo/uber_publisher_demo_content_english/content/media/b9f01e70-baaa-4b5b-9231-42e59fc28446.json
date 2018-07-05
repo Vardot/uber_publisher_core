@@ -151,16 +151,6 @@
             "value": 1506327662
         }
     ],
-    "revision_timestamp": [
-        {
-            "value": 1506327662
-        }
-    ],
-    "revision_log": [
-        {
-            "value": "Updated the Image field"
-        }
-    ],
     "default_langcode": [
         {
             "value": true,

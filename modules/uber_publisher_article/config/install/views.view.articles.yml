@@ -13,7 +13,7 @@ dependencies:
     - entityqueue.entity_queue.promoted_splash_area_sections
     - field.storage.node.body
     - field.storage.node.field_image
-    - image.style.d8_traditional
+    - image.style.d08_traditional
     - node.type.article
     - taxonomy.vocabulary.section
   content:
@@ -26,7 +26,7 @@ dependencies:
   module:
     - ds
     - entityqueue
-    - media_entity
+    - media
     - node
     - taxonomy
     - text
@@ -349,7 +349,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: d8_traditional
+            image_style: d08_traditional
             image_link: content
           group_column: target_id
           group_columns: {  }
@@ -798,7 +798,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: d8_traditional
+            image_style: d08_traditional
             image_link: content
           group_column: target_id
           group_columns: {  }
@@ -1344,7 +1344,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: d8_traditional
+            image_style: d08_traditional
             image_link: content
           group_column: target_id
           group_columns: {  }
@@ -1849,7 +1849,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: d8_traditional
+            image_style: d08_traditional
             image_link: content
           group_column: target_id
           group_columns: {  }
@@ -2358,7 +2358,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: d8_traditional
+            image_style: d08_traditional
             image_link: content
           group_column: target_id
           group_columns: {  }
@@ -3757,7 +3757,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: d8_traditional
+            image_style: d08_traditional
             image_link: content
           group_column: target_id
           group_columns: {  }
@@ -4290,7 +4290,7 @@ display:
           click_sort_column: target_id
           type: media_thumbnail
           settings:
-            image_style: d8_traditional
+            image_style: d08_traditional
             image_link: content
           group_column: target_id
           group_columns: {  }

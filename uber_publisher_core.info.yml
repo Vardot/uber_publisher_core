@@ -27,7 +27,7 @@ dependencies:
   - linked_field
   - locale
   - maxlength
-  - media_entity
+  - media
   - menu_ui
   - metatag
   - node

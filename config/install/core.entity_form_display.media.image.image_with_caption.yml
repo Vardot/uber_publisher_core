@@ -3,10 +3,10 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.image_with_caption
-    - field.field.media.image.field_image
+    - field.field.media.image.field_media_image
     - field.field.media.image.field_media_caption
     - image.style.field_preview
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - content_moderation
     - image

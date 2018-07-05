@@ -151,16 +151,6 @@
             "value": 1506327483
         }
     ],
-    "revision_timestamp": [
-        {
-            "value": 1506327483
-        }
-    ],
-    "revision_log": [
-        {
-            "value": "Updated the Media name and Image fields"
-        }
-    ],
     "default_langcode": [
         {
             "value": true,

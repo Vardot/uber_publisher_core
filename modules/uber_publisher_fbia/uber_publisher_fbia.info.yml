@@ -7,7 +7,7 @@ dependencies:
   - ds
   - fb_instant_articles
   - image
-  - media_entity
+  - media
   - metatag
   - node
   - panelizer

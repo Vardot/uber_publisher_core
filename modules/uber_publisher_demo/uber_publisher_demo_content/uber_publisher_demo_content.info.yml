@@ -13,7 +13,7 @@ dependencies:
   - ds
   - entityqueue
   - field
-  - media_entity
+  - media
   - node
   - page_manager
   - panels

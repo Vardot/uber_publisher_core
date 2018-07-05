@@ -150,17 +150,7 @@
         {
             "value": 1506327306
         }
-    ],
-    "revision_timestamp": [
-        {
-            "value": 1506327306
-        }
-    ],
-    "revision_log": [
-        {
-            "value": "Created new Image"
-        }
-    ],
+    ]
     "default_langcode": [
         {
             "value": true,
