@@ -21,7 +21,7 @@
                 "href": "http:\/\/default\/user\/1?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
                 "href": "http:\/\/default\/sites\/default\/files\/2017-06\/federal20reserve20building_1485981720241_190713_ver1.0_16980125_ver1.0_640_360.jpg"
             }
@@ -114,7 +114,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
                 "_links": {
                     "self": {

@@ -21,7 +21,7 @@
                 "href": "http:\/\/default\/en\/user\/1?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
                 "href": "http:\/\/default\/sites\/default\/files\/2017-06\/_96379895_4c638cae-26dd-4755-8e85-03566e887ba2.jpg"
             }
@@ -114,7 +114,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
                 "_links": {
                     "self": {
