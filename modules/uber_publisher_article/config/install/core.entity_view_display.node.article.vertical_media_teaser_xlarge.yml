@@ -5,8 +5,9 @@ dependencies:
     - core.entity_view_mode.node.vertical_media_teaser_xlarge
     - field.field.node.article.body
     - field.field.node.article.field_comments
-    - field.field.node.article.field_image
+    - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_post_to_twitter
     - field.field.node.article.field_section
     - field.field.node.article.field_tags
     - field.field.node.article.field_yoast_seo
@@ -34,13 +35,13 @@ third_party_settings:
           layout_class: {  }
     regions:
       main:
-        - field_image
+        - field_media
         - node_title
         - body
     fields:
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 2
         label: hidden
         formatter: default
         settings:
@@ -60,31 +61,41 @@ content:
   body:
     label: hidden
     type: smart_trim
-    weight: 2
+    weight: 3
     settings:
-      trim_length: '40'
+      trim_length: 40
       trim_type: words
       trim_suffix: ' ...'
-      more_link: '0'
+      more_link: false
       more_text: More
       summary_handler: full
       trim_options:
-        text: text
+        text: true
       more_class: more-link
+      wrap_output: false
+      wrap_class: trimmed
     third_party_settings: {  }
     region: main
-  field_image:
-    weight: 0
+  field_media:
+    type: entity_reference_entity_view
+    weight: 1
+    region: main
     label: hidden
     settings:
       view_mode: s08_standard
       link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: main
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
 hidden:
   field_comments: true
   field_meta_tags: true
+  field_post_to_twitter: true
   field_section: true
   field_tags: true
   field_yoast_seo: true

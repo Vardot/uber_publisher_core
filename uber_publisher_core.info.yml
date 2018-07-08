@@ -37,6 +37,7 @@ dependencies:
   - path
   - pathauto
   - rabbit_hole
+  - responsive_image
   - smart_trim
   - system
   - taxonomy
@@ -44,6 +45,7 @@ dependencies:
   - user
   - varbase_media
   - varbase_seo
+  - video_embed_field
   - views
   - views_bootstrap
   - views_exclude_previous

@@ -1,4 +1,3 @@
-uuid: 56c45596-c932-47b3-b9a9-7013b3936034
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,6 @@ dependencies:
     - taxonomy
     - user
     - views_exclude_previous
-_core:
-  default_config_hash: _aflxJ285shHpXpF6bQJ5wiJnEg916jX0eNa7T6cVZ0
 id: uber_puplisher_taxonomy_term
 label: 'Uber Puplisher Taxonomy term'
 module: taxonomy

@@ -1,4 +1,3 @@
-uuid: 0af13e46-d038-44d5-9de8-b1c2887689d9
 langcode: en
 status: true
 dependencies:
@@ -16,13 +15,6 @@ dependencies:
     - image.style.d08_traditional
     - node.type.article
     - taxonomy.vocabulary.section
-  content:
-    - 'taxonomy_term:section:44ba090b-70ff-4c01-bcf5-3b0a3ecd7e95'
-    - 'taxonomy_term:section:60c9208d-6a19-4e6c-a880-9ea9a6639eaa'
-    - 'taxonomy_term:section:7765ed7d-06d6-4f37-a26f-c5ac4a05c9f2'
-    - 'taxonomy_term:section:78952062-48f7-4cb2-ba05-66ac4f3694e5'
-    - 'taxonomy_term:section:970882fb-874d-4986-9295-702aec58ec46'
-    - 'taxonomy_term:section:d4226f65-a221-4983-8745-9e5948742d54'
   module:
     - ds
     - entityqueue

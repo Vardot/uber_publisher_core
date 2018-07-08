@@ -5,8 +5,9 @@ dependencies:
     - core.entity_view_mode.node.horizontal_media_teaser_medium
     - field.field.node.article.body
     - field.field.node.article.field_comments
-    - field.field.node.article.field_image
+    - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_post_to_twitter
     - field.field.node.article.field_section
     - field.field.node.article.field_tags
     - field.field.node.article.field_yoast_seo
@@ -35,27 +36,27 @@ third_party_settings:
           layout_class: {  }
     regions:
       left:
-        - field_image
+        - field_media
       right:
         - node_title
         - field_section
         - node_post_date
         - body
     fields:
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 3
-        label: hidden
-        formatter: ds_post_date_short
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 2
         label: hidden
         formatter: default
         settings:
           link: true
           wrapper: h3
           class: ''
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 4
+        label: hidden
+        formatter: ds_post_date_short
   panelizer:
     enable: false
     custom: false
@@ -68,32 +69,41 @@ mode: horizontal_media_teaser_medium
 content:
   body:
     type: smart_trim
-    weight: 4
+    weight: 5
     label: hidden
     settings:
-      trim_length: '30'
+      trim_length: 30
       trim_type: words
       trim_suffix: ' ...'
-      more_link: '0'
+      more_link: false
       more_text: More
       summary_handler: full
       trim_options:
-        text: text
+        text: true
       more_class: more-link
+      wrap_output: false
+      wrap_class: trimmed
     third_party_settings: {  }
     region: right
-  field_image:
+  field_media:
     type: entity_reference_entity_view
-    weight: 0
+    weight: 1
+    region: left
     label: hidden
     settings:
       view_mode: s04_standard
       link: false
-    third_party_settings: {  }
-    region: left
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_section:
     type: entity_reference_label
-    weight: 2
+    weight: 3
     region: right
     label: hidden
     settings:
@@ -102,6 +112,7 @@ content:
 hidden:
   field_comments: true
   field_meta_tags: true
+  field_post_to_twitter: true
   field_tags: true
   field_yoast_seo: true
   langcode: true

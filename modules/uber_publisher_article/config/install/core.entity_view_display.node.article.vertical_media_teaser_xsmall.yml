@@ -5,8 +5,9 @@ dependencies:
     - core.entity_view_mode.node.vertical_media_teaser_xsmall
     - field.field.node.article.body
     - field.field.node.article.field_comments
-    - field.field.node.article.field_image
+    - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_post_to_twitter
     - field.field.node.article.field_section
     - field.field.node.article.field_tags
     - field.field.node.article.field_yoast_seo
@@ -33,25 +34,25 @@ third_party_settings:
           layout_class: {  }
     regions:
       main:
-        - field_image
+        - field_media
         - node_title
         - field_section
         - node_post_date
     fields:
-      node_post_date:
-        plugin_id: node_post_date
-        weight: 3
-        label: hidden
-        formatter: ds_post_date_short
       node_title:
         plugin_id: node_title
-        weight: 1
+        weight: 2
         label: hidden
         formatter: default
         settings:
           link: true
           wrapper: h3
           class: ''
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 4
+        label: hidden
+        formatter: ds_post_date_short
   panelizer:
     enable: false
     custom: false
@@ -62,18 +63,25 @@ targetEntityType: node
 bundle: article
 mode: vertical_media_teaser_xsmall
 content:
-  field_image:
-    weight: 0
+  field_media:
+    type: entity_reference_entity_view
+    weight: 1
+    region: main
     label: hidden
     settings:
       view_mode: s02_standard
       link: false
-    third_party_settings: {  }
-    type: entity_reference_entity_view
-    region: main
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
   field_section:
     type: entity_reference_label
-    weight: 2
+    weight: 3
     region: main
     label: hidden
     settings:
@@ -83,6 +91,7 @@ hidden:
   body: true
   field_comments: true
   field_meta_tags: true
+  field_post_to_twitter: true
   field_tags: true
   field_yoast_seo: true
   langcode: true

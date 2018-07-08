@@ -5,8 +5,9 @@ dependencies:
     - core.entity_view_mode.node.text_teaser_medium
     - field.field.node.article.body
     - field.field.node.article.field_comments
-    - field.field.node.article.field_image
+    - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
+    - field.field.node.article.field_post_to_twitter
     - field.field.node.article.field_section
     - field.field.node.article.field_tags
     - field.field.node.article.field_yoast_seo
@@ -61,21 +62,22 @@ content:
     type: smart_trim
     weight: 2
     settings:
-      trim_length: '30'
+      trim_length: 30
       trim_type: words
       trim_suffix: ' ...'
-      more_link: '0'
+      more_link: false
       more_text: More
       summary_handler: full
       trim_options:
-        text: text
+        text: true
       more_class: more-link
     third_party_settings: {  }
     region: main
 hidden:
   field_comments: true
-  field_image: true
+  field_media: true
   field_meta_tags: true
+  field_post_to_twitter: true
   field_section: true
   field_tags: true
   field_yoast_seo: true

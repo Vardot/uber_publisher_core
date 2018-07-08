@@ -28,13 +28,16 @@ dependencies:
   - path
   - pathauto
   - rabbit_hole
+  - simple_sitemap
   - smart_trim
   - system
   - taxonomy
   - text
   - uber_publisher_amp
   - uber_publisher_core
+  - uber_publisher_social_post
   - user
+  - varbase_core
   - varbase_media
   - varbase_seo
   - views
