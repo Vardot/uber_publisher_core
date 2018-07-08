@@ -79,7 +79,7 @@ content:
     region: main
     label: hidden
     settings:
-      view_mode: se2e
+      view_mode: s08
       link: false
     third_party_settings:
       ds:
