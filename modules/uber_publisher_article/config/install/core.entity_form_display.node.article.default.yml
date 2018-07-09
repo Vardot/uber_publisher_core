@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.article.field_comments
     - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
-    - field.field.node.article.field_post_to_twitter
     - field.field.node.article.field_section
     - field.field.node.article.field_tags
     - field.field.node.article.field_yoast_seo
@@ -87,13 +86,6 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
-  field_post_to_twitter:
-    type: boolean_checkbox
-    weight: 10
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_section:
     weight: 14
     settings: {  }

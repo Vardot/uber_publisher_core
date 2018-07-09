@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.article.field_comments
     - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
-    - field.field.node.article.field_post_to_twitter
     - field.field.node.article.field_section
     - field.field.node.article.field_tags
     - field.field.node.article.field_yoast_seo
@@ -107,7 +106,6 @@ content:
     region: main
 hidden:
   field_meta_tags: true
-  field_post_to_twitter: true
   field_yoast_seo: true
   langcode: true
   links: true
