@@ -5,5 +5,5 @@ core: 8.x
 dependencies:
   - uber_publisher_demo_content
 version: 8.x-5.x-dev
-package: 'Uber Publisher'
+package: 'Uber Publisher Demo'
 target_lang: ar

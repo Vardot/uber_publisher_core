@@ -3,9 +3,11 @@ description: 'Default content for uber publisher'
 type: module
 core: 8.x
 version: 8.x-5.x-dev
-package: 'Uber Publisher'
+package: 'Uber Publisher Demo'
 dependencies:
-  - block
-  - block_class
+  - 'better_normalizers:better_normalizers'
   - 'default_content:default_content'
-  - system
+  - varbase_core
+  - varbase_media
+  - uber_publisher_article
+  - uber_publisher_core

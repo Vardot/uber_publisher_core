@@ -4,28 +4,10 @@ type: module
 core: 8.x
 dependencies:
   - 'better_normalizers:better_normalizers'
-  - block
-  - block_class
-  - block_content
-  - content_moderation
-  - ctools
   - 'default_content:default_content'
-  - ds
-  - entityqueue
-  - field
-  - media
-  - node
-  - page_manager
-  - panels
-  - sharerich
-  - system
-  - taxonomy
-  - text
+  - varbase_core
+  - varbase_media
   - uber_publisher_article
   - uber_publisher_core
-  - user
-  - varbase_media
-  - views
-  - webform
 version: 8.x-5.x-dev
-package: 'Uber Publisher'
+package: 'Uber Publisher Demo'

@@ -3,6 +3,6 @@ description: 'Default content for Uber publisher for English language.'
 type: module
 core: 8.x
 version: 8.x-5.x-dev
-package: 'Uber Publisher'
+package: 'Uber PublisherUber Publisher Demo'
 dependencies:
   - uber_publisher_default_content
