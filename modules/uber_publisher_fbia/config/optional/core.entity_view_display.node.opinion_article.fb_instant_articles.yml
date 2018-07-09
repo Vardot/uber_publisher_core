@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.opinion_article.body
     - field.field.node.opinion_article.field_author_profile
     - field.field.node.opinion_article.field_comments
-    - field.field.node.opinion_article.field_image
     - field.field.node.opinion_article.field_meta_tags
     - field.field.node.opinion_article.field_section
     - field.field.node.opinion_article.field_tags
@@ -33,7 +32,7 @@ third_party_settings:
       settings: {  }
     regions:
       header:
-        - field_image
+        - field_media
       content:
         - field_section
         - body
@@ -50,7 +49,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-  field_image:
+  field_media:
     type: fbia_erimage
     weight: 0
     region: header

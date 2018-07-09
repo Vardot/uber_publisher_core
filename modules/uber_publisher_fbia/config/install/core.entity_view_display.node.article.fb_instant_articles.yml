@@ -5,7 +5,6 @@ dependencies:
     - core.entity_view_mode.node.fb_instant_articles
     - field.field.node.article.body
     - field.field.node.article.field_comments
-    - field.field.node.article.field_image
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_section
     - field.field.node.article.field_tags
@@ -32,7 +31,7 @@ third_party_settings:
       settings: {  }
     regions:
       header:
-        - field_image
+        - field_media
       content:
         - field_section
         - body
@@ -77,7 +76,7 @@ content:
             fi: false
             fi-def-at: false
     region: content
-  field_image:
+  field_media:
     weight: 0
     label: hidden
     settings:

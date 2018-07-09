@@ -22,7 +22,7 @@
                 "href": "http:\/\/default\/technology?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_media": [
             {
                 "href": "http:\/\/default\/media\/16?_format=hal_json",
                 "lang": "en"
@@ -124,7 +124,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_media": [
             {
                 "_links": {
                     "self": {

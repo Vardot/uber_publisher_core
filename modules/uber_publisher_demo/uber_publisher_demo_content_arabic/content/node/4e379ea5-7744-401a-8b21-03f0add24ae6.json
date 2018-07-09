@@ -22,7 +22,7 @@
                 "href": "http:\/\/default\/%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7?_format=hal_json"
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_media": [
             {
                 "href": "http:\/\/default\/media\/62?_format=hal_json",
                 "lang": "ar"
@@ -133,7 +133,7 @@
                 ]
             }
         ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_image": [
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_media": [
             {
                 "_links": {
                     "self": {

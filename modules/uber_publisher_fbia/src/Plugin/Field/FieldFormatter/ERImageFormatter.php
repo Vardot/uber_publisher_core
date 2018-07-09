@@ -184,7 +184,7 @@ class ERImageFormatter extends EntityReferenceFormatterBase implements InstantAr
         return [];
       }
       //$entity = Media::load($image[0]['target_id']);
-      $file = file_load($image->get('field_image')->getValue()['0']['target_id']);
+      $file = file_load($image->get('field_media_image')->getValue()['0']['target_id']);
       $image_uri = $file->getFileUri();
       $url = file_create_url($image_uri);
       // Use the canonical URL override if set.
@@ -201,7 +201,7 @@ class ERImageFormatter extends EntityReferenceFormatterBase implements InstantAr
         $article->withHeader($header);
       }
       $header->withCover($article_image);
-      $caption = $image->get('field_image')->getValue()['0']['alt'];
+      $caption = $image->get('field_media_image')->getValue()['0']['alt'];
 
       if ($this->getSetting('caption') && !empty($caption)) {
         $article_image->withCaption(

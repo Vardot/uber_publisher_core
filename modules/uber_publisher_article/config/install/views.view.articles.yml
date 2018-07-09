@@ -11,7 +11,7 @@ dependencies:
     - entityqueue.entity_queue.promoted_splash_area
     - entityqueue.entity_queue.promoted_splash_area_sections
     - field.storage.node.body
-    - field.storage.node.field_image
+    - field.storage.node.field_media
     - image.style.d08_traditional
     - node.type.article
     - taxonomy.vocabulary.section
@@ -290,10 +290,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_media:
+          id: field_media
+          table: node__field_media
+          field: field_media
           relationship: none
           group_type: group
           admin_label: ''
@@ -365,7 +365,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_image}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> / \n                      <span class=\"post-created \">{{ created }}</span> /\n                      <span class=\"post-comment\"> 0 </span>\n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
+            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_media}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> / \n                      <span class=\"post-created \">{{ created }}</span> /\n                      <span class=\"post-comment\"> 0 </span>\n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -533,7 +533,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
   culture_art_articles:
     display_plugin: block
     id: culture_art_articles
@@ -739,10 +739,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_media:
+          id: field_media
+          table: node__field_media
+          field: field_media
           relationship: none
           group_type: group
           admin_label: ''
@@ -814,7 +814,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_image}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> /\n                      <span class=\"post-created \">{{ created }}</span> /\n                     <span class=\"post-comment\"> 0</span> \n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
+            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_media}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> /\n                      <span class=\"post-created \">{{ created }}</span> /\n                     <span class=\"post-comment\"> 0</span> \n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1064,7 +1064,7 @@ display:
       tags:
         - 'config:entityqueue.entity_queue.promoted_splash_area'
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
   economy_articles:
@@ -1285,10 +1285,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_media:
+          id: field_media
+          table: node__field_media
+          field: field_media
           relationship: none
           group_type: group
           admin_label: ''
@@ -1360,7 +1360,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{ field_image }}\n      </div>\n      <div class=\"post-content text-center padding-10\">\n            <span class=\"post-categories\">{{ field_post_category }} </span>\n            <div class=\"post-title\"> {{ title }} </div>            \n            <div class=\"post-meta\">\n                    <span class=\"post-created\">{{ created }} </span> / \n                   <span class=\"post-comment\"> 0 </span>\n\t     </div>\n       </div>\n</div>"
+            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{ field_media }}\n      </div>\n      <div class=\"post-content text-center padding-10\">\n            <span class=\"post-categories\">{{ field_post_category }} </span>\n            <div class=\"post-title\"> {{ title }} </div>            \n            <div class=\"post-meta\">\n                    <span class=\"post-created\">{{ created }} </span> / \n                   <span class=\"post-comment\"> 0 </span>\n\t     </div>\n       </div>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -1584,7 +1584,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
   editors_pick_article:
     display_plugin: block
     id: editors_pick_article
@@ -1790,10 +1790,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_media:
+          id: field_media
+          table: node__field_media
+          field: field_media
           relationship: none
           group_type: group
           admin_label: ''
@@ -1865,7 +1865,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{ field_image }}\n      </div>\n      <div class=\"post-content text-left\">\n            <span class=\"post-categories\">{{ field_post_category }} </span>\n            <div class=\"post-title\"> {{ title }} </div>            \n            <div class=\"post-meta\">\n                    <span class=\"post-created\">{{ created }} </span> /\n                    <span class=\"post-comment\"> 0 </span>\n\t     </div>\n             <div class=\"post-body\">\n                {{ body }}\n             </div>\n       </div>\n</div>"
+            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{ field_media }}\n      </div>\n      <div class=\"post-content text-left\">\n            <span class=\"post-categories\">{{ field_post_category }} </span>\n            <div class=\"post-title\"> {{ title }} </div>            \n            <div class=\"post-meta\">\n                    <span class=\"post-created\">{{ created }} </span> /\n                    <span class=\"post-comment\"> 0 </span>\n\t     </div>\n             <div class=\"post-body\">\n                {{ body }}\n             </div>\n       </div>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -2091,7 +2091,7 @@ display:
       tags:
         - 'config:entityqueue.entity_queue.editor_s_pick'
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
   health_articles:
@@ -2299,10 +2299,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_media:
+          id: field_media
+          table: node__field_media
+          field: field_media
           relationship: none
           group_type: group
           admin_label: ''
@@ -2374,7 +2374,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_image}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> /\n                      <span class=\"post-created \">{{ created }}</span> /\n                     <span class=\"post-comment\"> 0</span> \n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
+            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_media}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> /\n                      <span class=\"post-created \">{{ created }}</span> /\n                     <span class=\"post-comment\"> 0</span> \n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -2624,7 +2624,7 @@ display:
       tags:
         - 'config:entityqueue.entity_queue.promoted_splash_area'
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
   most_viewed_articles:
@@ -2782,7 +2782,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
   politics_articles:
     display_plugin: block
     id: politics_articles
@@ -2998,7 +2998,7 @@ display:
       tags:
         - 'config:entityqueue.entity_queue.promoted_splash_area'
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
   promoted_splash_area:
@@ -3202,7 +3202,7 @@ display:
       tags:
         - 'config:entityqueue.entity_queue.promoted_splash_area'
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
   promoted_splash_area_landing_pages:
@@ -3490,7 +3490,7 @@ display:
       tags:
         - 'config:entityqueue.entity_queue.promoted_splash_area_sections'
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
   sport_articles:
@@ -3698,10 +3698,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_media:
+          id: field_media
+          table: node__field_media
+          field: field_media
           relationship: none
           group_type: group
           admin_label: ''
@@ -3773,7 +3773,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_image}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> /\n                      <span class=\"post-created \">{{ created }}</span> /\n                     <span class=\"post-comment\"> 0</span> \n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
+            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_media}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> /\n                      <span class=\"post-created \">{{ created }}</span> /\n                     <span class=\"post-comment\"> 0</span> \n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -4023,7 +4023,7 @@ display:
       tags:
         - 'config:entityqueue.entity_queue.promoted_splash_area'
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
   technology_articles:
@@ -4231,10 +4231,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
+        field_media:
+          id: field_media
+          table: node__field_media
+          field: field_media
           relationship: none
           group_type: group
           admin_label: ''
@@ -4306,7 +4306,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_image}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> /\n                      <span class=\"post-created \">{{ created }}</span> /\n                     <span class=\"post-comment\"> 0</span> \n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
+            text: "<div class=\"post-block\">\n      <div class=\"post-image\">\n            {{field_media}}\n      </div>\n      <div class=\"post-content\">\n             <div class=\"post-title\"> {{ title }} </div>\n              <div class=\"post-meta\">\n\t              <span class=\"post-categories\"></span> /\n                      <span class=\"post-created \">{{ created }}</span> /\n                     <span class=\"post-comment\"> 0</span> \n\t     </div>\n             <div class=\"post-body\">{{ body }}</div>\n       </div>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -4562,6 +4562,6 @@ display:
       tags:
         - 'config:entityqueue.entity_queue.promoted_splash_area'
         - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_image'
+        - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
