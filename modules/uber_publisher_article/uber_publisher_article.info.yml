@@ -3,14 +3,14 @@ description: 'Uber Publisher Article content like news, press releases or blog p
 type: module
 core: 8.x
 dependencies:
+  - comment
+  - content_moderation
+  - fb_instant_articles
+  - views_exclude_previous
   - varbase_core
   - varbase_media
   - varbase_seo
   - uber_publisher_core
   - uber_publisher_amp
-  - comments
-  - content_moderation
-  - fb_instant_articles
-  - views_exclude_previous
 version: 8.x-5.x-dev
 package: 'Uber Publisher'
