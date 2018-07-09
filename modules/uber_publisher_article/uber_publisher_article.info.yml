@@ -3,46 +3,14 @@ description: 'Uber Publisher Article content like news, press releases or blog p
 type: module
 core: 8.x
 dependencies:
-  - advanced_text_formatter
-  - autocomplete_deluxe
-  - block
-  - block_class
-  - comment
-  - content_moderation
-  - ctools
-  - ds
-  - entity_browser
-  - entityqueue
-  - fb_instant_articles
-  - field
-  - field_group
-  - language
-  - maxlength
-  - media
-  - menu_ui
-  - metatag
-  - node
-  - page_manager
-  - panelizer
-  - panels
-  - path
-  - pathauto
-  - rabbit_hole
-  - simple_sitemap
-  - smart_trim
-  - system
-  - taxonomy
-  - text
-  - uber_publisher_amp
-  - uber_publisher_core
-  - uber_publisher_social_post
-  - user
   - varbase_core
   - varbase_media
   - varbase_seo
-  - views
-  - views_bootstrap
+  - uber_publisher_core
+  - uber_publisher_amp
+  - comments
+  - content_moderation
+  - fb_instant_articles
   - views_exclude_previous
-  - yoast_seo
 version: 8.x-5.x-dev
 package: 'Uber Publisher'
