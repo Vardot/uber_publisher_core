@@ -1,6 +1,0 @@
-# Uber Publisher Demo Content
-
-This is an [Uber Publisher](https://www.drupal.org/project/uber_publisher)
- feature.
-
-Demo content for Uber publisher.

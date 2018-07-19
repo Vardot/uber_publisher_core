@@ -60,13 +60,4 @@ function uber_publisher_core_form_node_form_alter(&$form, $form_state) {
   if (isset($form['simple_sitemap'])) {
     $form['simple_sitemap']['#weight'] = -2;
   }
-
-  if (isset($form['ds_switch_view_mode'])) {
-    $form['ds_switch_view_mode']['#weight'] = 101;
-  }
-
-  $allowed_forms = ['node_in_pictures_form', 'node_in_pictures_edit_form'];
-  if (!in_array($form['#form_id'], $allowed_forms)) {
-    $form['ds_switch_view_mode']['#access'] = FALSE;
-  }
 }
