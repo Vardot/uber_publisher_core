@@ -13,14 +13,8 @@ dependencies:
   module:
     - image
     - metatag
-    - panelizer
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
+third_party_settings: {  }
 id: node.author_profile.fb_instant_articles
 targetEntityType: node
 bundle: author_profile

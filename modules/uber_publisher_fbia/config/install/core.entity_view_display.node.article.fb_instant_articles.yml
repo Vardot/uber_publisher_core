@@ -13,15 +13,9 @@ dependencies:
   module:
     - ds
     - fb_instant_articles
-    - panelizer
     - uber_publisher_fbia
     - user
 third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
   ds:
     layout:
       id: up_fbia
