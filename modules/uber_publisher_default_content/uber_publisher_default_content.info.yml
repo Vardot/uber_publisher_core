@@ -4,10 +4,11 @@ type: module
 core: 8.x
 version: 8.x-5.x-dev
 package: 'Uber Publisher Demo'
+project: 'uber_publisher_core'
 dependencies:
-  - 'better_normalizers:better_normalizers'
-  - 'default_content:default_content'
-  - varbase_core
-  - varbase_media
-  - uber_publisher_article
-  - uber_publisher_core
+  - varbase_core:varbase_core
+  - varbase_media:varbase_media
+  - uber_publisher_core:uber_publisher_core
+  - uber_publisher_article:uber_publisher_article
+  - better_normalizers:better_normalizers
+  - default_content:default_content

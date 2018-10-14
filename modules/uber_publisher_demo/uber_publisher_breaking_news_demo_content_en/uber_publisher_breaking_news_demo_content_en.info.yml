@@ -2,7 +2,8 @@ name: 'Uber Publisher Breaking News Demo Content (English)'
 description: 'Uber Publisher breaking news demo content for English language.'
 type: module
 core: 8.x
-package: 'Uber Publisher Demo'
 version: 8.x-5.x-dev
+package: 'Uber Publisher Demo'
+project: 'uber_publisher_core'
 dependencies:
-  - uber_publisher_demo_content
+  - uber_publisher_core:uber_publisher_demo_content

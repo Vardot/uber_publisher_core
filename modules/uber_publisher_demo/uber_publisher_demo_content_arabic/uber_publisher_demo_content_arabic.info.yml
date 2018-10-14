@@ -2,8 +2,10 @@ name: 'Uber Publisher Demo Content (Arabic)'
 description: 'Demo content for Uber publisher for Arabic language.'
 type: module
 core: 8.x
-dependencies:
-  - uber_publisher_demo_content
 version: 8.x-5.x-dev
 package: 'Uber Publisher Demo'
+project: 'uber_publisher_core'
 target_lang: ar
+dependencies:
+  - uber_publisher_core:uber_publisher_demo_content
+

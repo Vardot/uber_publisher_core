@@ -4,5 +4,6 @@ type: module
 core: 8.x
 version: 8.x-5.x-dev
 package: 'Uber PublisherUber Publisher Demo'
+project: 'uber_publisher_core'
 dependencies:
-  - uber_publisher_default_content
+  - uber_publisher_core:uber_publisher_default_content

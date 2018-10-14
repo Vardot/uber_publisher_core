@@ -2,10 +2,11 @@ name: 'Uber Publisher AMP'
 description: 'Accelerated Mobile Pages (AMP) integration module.'
 type: module
 core: 8.x
-dependencies:
-  - uber_publisher_core
-  - uber_publisher_article
-  - simple_amp
-  - subpathauto
 version: 8.x-5.x-dev
 package: 'Uber Publisher'
+project: 'uber_publisher_core'
+dependencies:
+  - uber_publisher_core:uber_publisher_core
+  - uber_publisher_core:uber_publisher_article
+  - simple_amp:simple_amp
+  - subpathauto:subpathauto
