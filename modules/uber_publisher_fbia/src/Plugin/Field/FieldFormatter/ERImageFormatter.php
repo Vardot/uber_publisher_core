@@ -18,8 +18,7 @@ use Facebook\InstantArticles\Elements\InstantArticle;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\media_entity\Entity\Media;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceFormatterBase;
-
-
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 /**
  * Plugin implementation of the 'fbia_erimage' formatter.
@@ -168,7 +167,7 @@ class ERImageFormatter extends EntityReferenceFormatterBase implements InstantAr
   /**
    * {@inheritdoc}
    */
-  public function viewInstantArticle(FieldItemListInterface $items, InstantArticle $article, $region, $langcode = NULL) {
+  public function viewInstantArticle(FieldItemListInterface $items, InstantArticle $article, $region, NormalizerInterface $normalizer, $langcode = NULL) {
     // Need to call parent::prepareView() to populate the entities since it's
     // not otherwise getting called.
     $this->prepareView([$items->getEntity()->id() => $items]);

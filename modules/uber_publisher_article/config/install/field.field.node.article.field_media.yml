@@ -5,7 +5,7 @@ dependencies:
     - field.storage.node.field_media
     - media.type.image
     - media.type.video
-    - media.type.video_embed
+    - media.type.remote_video
     - node.type.article
 id: node.article.field_media
 field_name: field_media
@@ -22,7 +22,7 @@ settings:
   handler_settings:
     target_bundles:
       image: image
-      video_embed: video_embed
+      remote_video: remote_video
       video: video
     sort:
       field: _none
