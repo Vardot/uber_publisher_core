@@ -25,7 +25,6 @@ dependencies:
   - metatag
   - node
   - page_manager
-  - panelizer
   - panels
   - path
   - pathauto

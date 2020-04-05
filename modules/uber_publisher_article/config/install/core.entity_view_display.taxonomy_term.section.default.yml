@@ -8,7 +8,6 @@ dependencies:
   module:
     - layout_builder
     - layout_discovery
-    - panelizer
     - text
     - views
 third_party_settings:
@@ -34,11 +33,6 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: taxonomy_term.section.default
 targetEntityType: taxonomy_term
 bundle: section
