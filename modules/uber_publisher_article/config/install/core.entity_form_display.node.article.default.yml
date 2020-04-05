@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.media_browser
     - field.field.node.article.body
     - field.field.node.article.field_comments
     - field.field.node.article.field_media
@@ -15,10 +14,10 @@ dependencies:
     - advanced_text_formatter
     - autocomplete_deluxe
     - comment
-    - content_moderation
-    - entity_browser
     - field_group
+    - length_indicator
     - maxlength
+    - media_library
     - metatag
     - path
     - text
@@ -29,16 +28,63 @@ third_party_settings:
       children:
         - field_section
         - field_tags
-      parent_name: ''
-      weight: 4
-      format_type: fieldset
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
       format_settings:
         id: ''
         classes: ''
         description: ''
         required_fields: true
+        open: false
+        formatter: closed
       label: Categories
       region: content
+    group_tabs:
+      children:
+        - group_basic_info
+        - group_categories
+        - group_page_content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Tabs
+    group_basic_info:
+      children:
+        - title
+        - field_media
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: true
+      label: 'Basic info'
+    group_page_content:
+      children:
+        - body
+      parent_name: group_tabs
+      weight: 22
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Page content'
+_core:
+  default_config_hash: XWVrZQWt-Qac_9HXILV_XTcygj1tILBYHVVGZd3-p0U
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -46,21 +92,22 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 1
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_comments:
-    weight: 8
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: comment_default
@@ -68,32 +115,28 @@ content:
   field_media:
     weight: 2
     settings:
-      entity_browser: media_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: true
-      open: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: field_preview
+      media_types:
+        - image
+        - remote_video
+        - video
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_meta_tags:
-    weight: 9
-    settings: {  }
+    weight: 6
+    settings:
+      sidebar: true
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_section:
-    weight: 14
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_tags:
-    weight: 15
+    weight: 4
     settings:
       limit: '0'
       min_length: '1'
@@ -103,14 +146,14 @@ content:
       new_terms: '1'
       match_operator: CONTAINS
       autocomplete_route_name: autocomplete_deluxe.autocomplete
-      target_type: taxonomy_term
       size: 60
       selection_handler: default
+      no_empty_message: 'No terms could be found. Please type in order to add a new term.'
     third_party_settings: {  }
     type: autocomplete_deluxe
     region: content
   field_yoast_seo:
-    weight: 7
+    weight: 4
     settings:
       body: body
     third_party_settings: {  }
@@ -124,7 +167,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -132,17 +175,23 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 9
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
-      placeholder: ''
+      placeholder: 'Enter title here'
     third_party_settings:
+      length_indicator:
+        indicator: true
+        indicator_opt:
+          optimin: 15
+          optimax: 50
+          tolerance: 10
       maxlength:
         maxlength_js: null
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
@@ -155,15 +204,16 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:
-    weight: 12
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
