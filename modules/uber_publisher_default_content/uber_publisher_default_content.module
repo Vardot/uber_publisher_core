@@ -8,11 +8,11 @@
 /**
  * Implements hook_install().
  */
-
 function uber_publisher_default_content_install() {
   if (\Drupal::languageManager()->getCurrentLanguage()->getId() == 'ar') {
     \Drupal::service('module_installer')->install(['uber_publisher_default_content_arabic']);
-  } else {
+  }
+  else {
     \Drupal::service('module_installer')->install(['uber_publisher_default_content_english']);
   }
 }

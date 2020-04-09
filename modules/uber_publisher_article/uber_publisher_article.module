@@ -1,7 +1,10 @@
 <?php
 
-use \Drupal\entityqueue\EntityQueueInterface;
-use \Drupal\Core\Entity\EntityInterface;
+/**
+ * @file
+ */
+
+use Drupal\entityqueue\Entity\EntitySubqueue;
 
 /**
  * Implements hook_entity_insert().
@@ -17,8 +20,8 @@ function uber_publisher_article_taxonomy_term_insert($term) {
       $term_name = $term->getName();
     }
 
-    $subqueue = \Drupal\entityqueue\Entity\EntitySubqueue::create([
-      'name' => preg_replace('@[^a-z0-9-]+@','-', strtolower($term_name)),
+    $subqueue = EntitySubqueue::create([
+      'name' => preg_replace('@[^a-z0-9-]+@', '-', strtolower($term_name)),
       'title' => $term->getName(),
       'queue' => 'promoted_splash_area_sections',
     ]);

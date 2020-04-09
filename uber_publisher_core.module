@@ -1,22 +1,22 @@
 <?php
-/**
-* @file
-* Contains uber_publisher_core.module..
-*/
-
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
 /**
-* Implements hook_preprocess().
-*/
+ * @file
+ * Contains uber_publisher_core.module..
+ */
+
+use Drupal\block\Entity\Block;
+
+/**
+ * Implements hook_preprocess().
+ */
 function uber_publisher_core_preprocess(&$variables, $hook) {
-  // Sharerich blocks
-  $sharerich_block = \Drupal\block\Entity\Block::load('vartheme_sharerich_block');
-  if(isset($sharerich_block)){
+  // Sharerich blocks.
+  $sharerich_block = Block::load('vartheme_sharerich_block');
+  if (isset($sharerich_block)) {
     $sharerich_block_view = \Drupal::entityTypeManager()
-    ->getViewBuilder('block')
-    ->view($sharerich_block);
+      ->getViewBuilder('block')
+      ->view($sharerich_block);
 
     if ($sharerich_block_view) {
       $variables['sharerich_block'] = $sharerich_block_view;
@@ -30,8 +30,8 @@ function uber_publisher_core_preprocess(&$variables, $hook) {
 }
 
 /**
-* Implements hook_page_attachments().
-*/
+ * Implements hook_page_attachments().
+ */
 function uber_publisher_core_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'uber_publisher_core/general-scripts';
 }

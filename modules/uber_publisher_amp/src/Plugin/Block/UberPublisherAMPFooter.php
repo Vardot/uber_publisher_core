@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Contains \Drupal\uber_publisher_amp\Plugin\Block\UberPublisherAMPFooter.
- */
-
 namespace Drupal\uber_publisher_amp\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
@@ -23,7 +18,6 @@ use Drupal\Core\Form\FormStateInterface;
 class UberPublisherAMPFooter extends BlockBase implements BlockPluginInterface {
 
   /**
-   *
    * {@inheritdoc}
    */
   public function build() {
@@ -36,7 +30,6 @@ class UberPublisherAMPFooter extends BlockBase implements BlockPluginInterface {
   }
 
   /**
-   *
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
@@ -45,7 +38,6 @@ class UberPublisherAMPFooter extends BlockBase implements BlockPluginInterface {
   }
 
   /**
-   *
    * {@inheritdoc}
    */
   public function blockSubmit($form, FormStateInterface $form_state) {

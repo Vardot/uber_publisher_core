@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @file
+ */
+
+/**
+ *
+ */
 function uber_publisher_amp_preprocess_amp__node(&$variables) {
   $block_manager = \Drupal::service('plugin.manager.block');
   $config = [];

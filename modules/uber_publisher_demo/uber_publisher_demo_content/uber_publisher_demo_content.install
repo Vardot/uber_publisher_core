@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * @file
+ */
+
 use Drupal\block\Entity\Block;
 
 /**
@@ -7,10 +11,10 @@ use Drupal\block\Entity\Block;
  */
 
 /**
-* Implements hook_install().
-*/
+ * Implements hook_install().
+ */
 function uber_publisher_demo_content_install() {
-  // Remove default share this block that provided by sharerich module
+  // Remove default share this block that provided by sharerich module.
   $block = Block::load('sharerich_block');
   if ($block) {
     $block->delete();
@@ -22,8 +26,8 @@ function uber_publisher_demo_content_install() {
 }
 
 /**
-* Implements hook_install().
-*/
+ * Implements hook_install().
+ */
 function uber_publisher_demo_content_update_8002(&$sandbox) {
   $config_factory = \Drupal::configFactory();
   $script = "<script async='async' src='https://www.google.com/adsense/search/ads.js'></script><script type='text/javascript' charset='utf-8'>(function(g,o){g[o]=g[o]||function(){(g[o]['q']=g[o]['q']||[]).push(arguments)},g[o]['t']=1*new Date})(window,'_googCsa');</script>";

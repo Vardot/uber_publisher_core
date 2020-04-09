@@ -2,21 +2,16 @@
 
 namespace Drupal\uber_publisher_fbia\Plugin\Field\FieldFormatter;
 
-use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Session\AccountInterface;
 use Drupal\fb_instant_articles\Plugin\Field\InstantArticleFormatterInterface;
 use Drupal\fb_instant_articles\Regions;
-use Drupal\image\Plugin\Field\FieldFormatter\ImageFormatter as DrupalImageFormatter;
 use Facebook\InstantArticles\Elements\Caption;
 use Facebook\InstantArticles\Elements\Header;
 use Facebook\InstantArticles\Elements\Image;
 use Facebook\InstantArticles\Elements\InstantArticle;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\media_entity\Entity\Media;
 use Drupal\Core\Field\Plugin\Field\FieldFormatter\EntityReferenceFormatterBase;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
@@ -179,10 +174,10 @@ class ERImageFormatter extends EntityReferenceFormatterBase implements InstantAr
     }
 
     foreach ($images as $delta => $image) {
-      if($image->get('bundle')->getValue()['0']['target_id'] != 'image') {
+      if ($image->get('bundle')->getValue()['0']['target_id'] != 'image') {
         return [];
       }
-      //$entity = Media::load($image[0]['target_id']);
+      // $entity = Media::load($image[0]['target_id']);
       $file = file_load($image->get('field_media_image')->getValue()['0']['target_id']);
       $image_uri = $file->getFileUri();
       $url = file_create_url($image_uri);
@@ -223,7 +218,7 @@ class ERImageFormatter extends EntityReferenceFormatterBase implements InstantAr
       if ($presentation = $this->getSetting('presentation')) {
         $article_image->withPresentation($presentation);
       }
-      //Images can either go in the header as the cover image, or in the body.
+      // Images can either go in the header as the cover image, or in the body.
       if ($region === Regions::REGION_HEADER) {
         $header = $article->getHeader();
         if (!$header) {
@@ -271,4 +266,5 @@ class ERImageFormatter extends EntityReferenceFormatterBase implements InstantAr
     }
     return $label;
   }
+
 }
