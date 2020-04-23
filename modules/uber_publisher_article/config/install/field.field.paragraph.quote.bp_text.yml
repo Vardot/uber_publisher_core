@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_text
+    - paragraphs.paragraphs_type.quote
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    quote_editor: quote_editor
+    full_html: '0'
+    basic_html: '0'
+    code_html: '0'
+    plain_text: '0'
+id: paragraph.quote.bp_text
+field_name: bp_text
+entity_type: paragraph
+bundle: quote
+label: Quote
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -9,9 +9,6 @@ dependencies:
     - views
   theme:
     - vartheme
-third_party_settings:
-  block_class:
-    classes: ''
 id: views_block__articles_promoted_splash_area
 theme: vartheme
 region: content

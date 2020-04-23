@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.vertical_media_teaser_large
-    - field.field.node.article.body
     - field.field.node.article.field_comments
+    - field.field.node.article.field_lp_paragraphs
     - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_section
@@ -14,7 +14,6 @@ dependencies:
   module:
     - ds
     - field_group
-    - smart_trim
     - user
 third_party_settings:
   ds:
@@ -82,24 +81,11 @@ targetEntityType: node
 bundle: article
 mode: vertical_media_teaser_large
 content:
-  body:
-    label: hidden
-    type: smart_trim
-    weight: 5
-    settings:
-      trim_length: 40
-      trim_type: words
-      trim_suffix: ' ...'
-      more_link: false
-      more_text: More
-      summary_handler: full
-      trim_options:
-        text: true
-      more_class: more-link
-      wrap_output: false
-      wrap_class: trimmed
+  content_moderation_control:
+    weight: -20
+    settings: {  }
     third_party_settings: {  }
-    region: main
+    region: content
   field_media:
     type: entity_reference_entity_view
     weight: 1
@@ -126,6 +112,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_comments: true
+  field_lp_paragraphs: true
   field_meta_tags: true
   field_tags: true
   field_yoast_seo: true

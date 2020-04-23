@@ -1,0 +1,119 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lp_paragraphs
+    - node.type.article
+    - paragraphs.paragraphs_type.gallery
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.instagram
+    - paragraphs.paragraphs_type.pinterest
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.twitter
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.article.field_lp_paragraphs
+field_name: field_lp_paragraphs
+entity_type: node
+bundle: article
+label: Components
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      quote: quote
+      gallery: gallery
+      video: video
+      image: image
+      instagram: instagram
+      text: text
+      pinterest: pinterest
+      twitter: twitter
+    target_bundles_drag_drop:
+      bp_accordion:
+        weight: 18
+        enabled: false
+      bp_accordion_section:
+        weight: 19
+        enabled: false
+      bp_block:
+        weight: 20
+        enabled: false
+      bp_carousel:
+        weight: 21
+        enabled: false
+      bp_columns:
+        weight: 22
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 23
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 24
+        enabled: false
+      bp_column_wrapper:
+        weight: 25
+        enabled: false
+      bp_image:
+        weight: 26
+        enabled: false
+      bp_modal:
+        weight: 27
+        enabled: false
+      bp_simple:
+        weight: 28
+        enabled: false
+      bp_tabs:
+        weight: 29
+        enabled: false
+      bp_tab_section:
+        weight: 30
+        enabled: false
+      bp_view:
+        weight: 31
+        enabled: false
+      bp_webform:
+        weight: 32
+        enabled: false
+      from_library:
+        weight: 33
+        enabled: false
+      text_and_image:
+        weight: 34
+        enabled: false
+      social_media_embed:
+        weight: 35
+        enabled: false
+      quote:
+        enabled: true
+        weight: 37
+      gallery:
+        enabled: true
+        weight: 38
+      video:
+        enabled: true
+        weight: 40
+      image:
+        enabled: true
+        weight: 41
+      instagram:
+        enabled: true
+        weight: 43
+      text:
+        enabled: true
+        weight: 44
+      pinterest:
+        enabled: true
+        weight: 46
+      twitter:
+        enabled: true
+        weight: 51
+field_type: entity_reference_revisions

@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_pinterest
+    - media.type.pinterest
+  module:
+    - link
+id: media.pinterest.field_media_pinterest
+field_name: field_media_pinterest
+entity_type: media
+bundle: pinterest
+label: 'Pinterest URL'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

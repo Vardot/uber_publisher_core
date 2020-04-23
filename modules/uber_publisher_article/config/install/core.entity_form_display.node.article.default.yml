@@ -2,65 +2,41 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
     - field.field.node.article.field_comments
+    - field.field.node.article.field_lp_paragraphs
     - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_section
     - field.field.node.article.field_tags
     - field.field.node.article.field_yoast_seo
     - node.type.article
+    - workflows.workflow.varbase_basic_workflow
   module:
     - advanced_text_formatter
     - autocomplete_deluxe
     - comment
+    - content_moderation
     - field_group
     - length_indicator
     - maxlength
     - media_library
     - metatag
+    - paragraphs_features
+    - paragraphs_previewer
     - path
-    - text
+    - scheduler
     - yoast_seo
 third_party_settings:
   field_group:
-    group_categories:
-      children:
-        - field_section
-        - field_tags
-      parent_name: group_tabs
-      weight: 21
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-        open: false
-        formatter: closed
-      label: Categories
-      region: content
-    group_tabs:
-      children:
-        - group_basic_info
-        - group_categories
-        - group_page_content
-      parent_name: ''
-      weight: 0
-      format_type: tabs
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        direction: horizontal
-      label: Tabs
     group_basic_info:
       children:
+        - field_section
         - title
         - field_media
-      parent_name: group_tabs
-      weight: 20
-      format_type: tab
+        - field_tags
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
       region: content
       format_settings:
         id: ''
@@ -71,10 +47,10 @@ third_party_settings:
       label: 'Basic info'
     group_page_content:
       children:
-        - body
-      parent_name: group_tabs
-      weight: 22
-      format_type: tab
+        - field_lp_paragraphs
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
       region: content
       format_settings:
         id: ''
@@ -83,26 +59,14 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Page content'
-_core:
-  default_config_hash: XWVrZQWt-Qac_9HXILV_XTcygj1tILBYHVVGZd3-p0U
 id: node.article.default
 targetEntityType: node
 bundle: article
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 1
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -112,8 +76,32 @@ content:
     third_party_settings: {  }
     type: comment_default
     region: content
-  field_media:
+  field_lp_paragraphs:
     weight: 2
+    settings:
+      title: Component
+      title_plural: Components
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: 0
+        add_above: 0
+    third_party_settings:
+      paragraphs_features:
+        delete_confirmation: true
+        add_in_between: true
+        split_text: true
+        show_drag_and_drop: false
+    type: paragraphs_previewer
+    region: content
+  field_media:
+    weight: 5
     settings:
       media_types:
         - image
@@ -136,7 +124,7 @@ content:
     type: options_select
     region: content
   field_tags:
-    weight: 4
+    weight: 6
     settings:
       limit: '0'
       min_length: '1'
@@ -161,13 +149,24 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 13
-    settings: {  }
+    weight: 14
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 2
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -180,7 +179,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: 4
     region: content
     settings:
       size: 60
@@ -211,6 +210,12 @@ content:
       placeholder: ''
       match_limit: 10
     region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 13
+    region: content
+    settings: {  }
     third_party_settings: {  }
   url_redirects:
     weight: 8

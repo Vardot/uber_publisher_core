@@ -17,7 +17,8 @@ third_party_settings:
     sections:
       -
         layout_id: layout_onecol
-        layout_settings: {  }
+        layout_settings:
+          label: ''
         components:
           b40cf67e-60fb-484d-85ba-9c2b7667c45b:
             uuid: b40cf67e-60fb-484d-85ba-9c2b7667c45b
@@ -33,6 +34,7 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+        third_party_settings: {  }
 id: taxonomy_term.section.default
 targetEntityType: taxonomy_term
 bundle: section

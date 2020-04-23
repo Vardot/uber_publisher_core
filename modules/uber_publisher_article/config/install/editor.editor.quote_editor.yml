@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.quote_editor
+  module:
+    - ckeditor
+format: quote_editor
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Underline
+            - RemoveFormat
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+            - Unlink
+        -
+          name: Lists
+          items:
+            - NumberedList
+        -
+          name: Direction
+          items:
+            - BidiLtr
+            - BidiRtl
+  plugins:
+    stylescombo:
+      styles: ''
+    language:
+      language_list: un
+    autoembed:
+      status: ''
+    linkit:
+      linkit_profile: ''
+    tokenbrowser:
+      token_types: {  }
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

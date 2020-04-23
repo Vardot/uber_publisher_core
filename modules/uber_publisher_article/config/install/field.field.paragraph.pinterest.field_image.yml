@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.pinterest
+    - paragraphs.paragraphs_type.pinterest
+id: paragraph.pinterest.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: pinterest
+label: Pinterest
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      pinterest: pinterest
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

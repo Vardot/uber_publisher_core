@@ -8,9 +8,6 @@ dependencies:
     - views
   theme:
     - vartheme
-third_party_settings:
-  block_class:
-    classes: ''
 id: views_block__articles_most_viewed_articles
 theme: vartheme
 region: sidebar_second

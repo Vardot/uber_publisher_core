@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.text_teaser_medium
-    - field.field.node.article.body
     - field.field.node.article.field_comments
+    - field.field.node.article.field_lp_paragraphs
     - field.field.node.article.field_media
     - field.field.node.article.field_meta_tags
     - field.field.node.article.field_section
@@ -13,7 +13,6 @@ dependencies:
     - node.type.article
   module:
     - ds
-    - smart_trim
     - user
 third_party_settings:
   ds:
@@ -50,24 +49,14 @@ targetEntityType: node
 bundle: article
 mode: text_teaser_medium
 content:
-  body:
-    label: hidden
-    type: smart_trim
-    weight: 2
-    settings:
-      trim_length: 30
-      trim_type: words
-      trim_suffix: ' ...'
-      more_link: false
-      more_text: More
-      summary_handler: full
-      trim_options:
-        text: true
-      more_class: more-link
+  content_moderation_control:
+    weight: -20
+    settings: {  }
     third_party_settings: {  }
-    region: main
+    region: content
 hidden:
   field_comments: true
+  field_lp_paragraphs: true
   field_media: true
   field_meta_tags: true
   field_section: true

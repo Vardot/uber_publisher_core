@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.pinterest.field_media_in_library
+    - field.field.media.pinterest.field_media_pinterest
+    - image.style.medium
+    - media.type.pinterest
+  module:
+    - image
+id: media.pinterest.media_library
+targetEntityType: media
+bundle: pinterest
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  field_media_pinterest: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  uid: true
