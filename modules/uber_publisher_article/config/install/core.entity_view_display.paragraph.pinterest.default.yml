@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.pinterest.field_image
+    - field.field.paragraph.pinterest.field_media
     - paragraphs.paragraphs_type.pinterest
 id: paragraph.pinterest.default
 targetEntityType: paragraph
 bundle: pinterest
 mode: default
 content:
-  field_image:
-    weight: 0
+  field_media:
+    weight: 1
     label: hidden
     settings:
       link: true
