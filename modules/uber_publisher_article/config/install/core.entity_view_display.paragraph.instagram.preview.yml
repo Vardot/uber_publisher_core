@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.instagram.field_image
+    - field.field.paragraph.instagram.field_media
     - paragraphs.paragraphs_type.instagram
   module:
     - ds
@@ -17,7 +17,7 @@ targetEntityType: paragraph
 bundle: instagram
 mode: preview
 content:
-  field_image:
+  field_media:
     weight: 0
     label: hidden
     settings:

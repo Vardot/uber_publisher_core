@@ -44,5 +44,8 @@ dependencies:
   - views_bootstrap
   - views_exclude_previous
   - yoast_seo
+  - media_entity_instagram
+  - media_entity_pinterest
+  - media_entity_twitter
 version: 8.x-6.x-dev
 package: 'Uber Publisher'

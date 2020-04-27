@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.bp_link
+    - paragraphs.paragraphs_type.image
+  module:
+    - link
+id: paragraph.image.bp_link
+field_name: bp_link
+entity_type: paragraph
+bundle: image
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -2,26 +2,22 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.twitter.field_media
-    - paragraphs.paragraphs_type.twitter
+    - field.field.paragraph.image.bp_link
+    - field.field.paragraph.image.field_image
+    - paragraphs.paragraphs_type.image
   module:
     - ds
-    - layout_builder
-third_party_settings:
-  layout_builder:
-    allow_custom: false
-    enabled: false
-id: paragraph.twitter.preview
+    - linked_field
+id: paragraph.image.default
 targetEntityType: paragraph
-bundle: twitter
-mode: preview
+bundle: image
+mode: default
 content:
-  field_media:
+  field_image:
     weight: 0
     label: hidden
     settings:
-      view_mode: field_preview
+      view_mode: default
       link: false
     third_party_settings:
       ds:
@@ -31,7 +27,14 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+      linked_field:
+        linked: '1'
+        type: field
+        destination: bp_link
+        advanced: {  }
+        token: ''
     type: entity_reference_entity_view
     region: content
 hidden:
+  bp_link: true
   search_api_excerpt: true

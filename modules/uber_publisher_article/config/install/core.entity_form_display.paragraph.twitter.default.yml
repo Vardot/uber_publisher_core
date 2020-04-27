@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.twitter.field_image
+    - field.field.paragraph.twitter.field_media
     - paragraphs.paragraphs_type.twitter
   module:
     - inline_entity_form
@@ -11,7 +11,7 @@ targetEntityType: paragraph
 bundle: twitter
 mode: default
 content:
-  field_image:
+  field_media:
     weight: 0
     settings:
       form_mode: default

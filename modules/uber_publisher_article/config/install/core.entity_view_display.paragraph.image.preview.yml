@@ -3,20 +3,34 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.paragraph.preview
-    - field.field.paragraph.social_media_embed.field_image
-    - paragraphs.paragraphs_type.social_media_embed
+    - field.field.paragraph.image.bp_link
+    - field.field.paragraph.image.field_image
+    - paragraphs.paragraphs_type.image
   module:
     - ds
     - layout_builder
+    - link
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-id: paragraph.social_media_embed.preview
+id: paragraph.image.preview
 targetEntityType: paragraph
-bundle: social_media_embed
+bundle: image
 mode: preview
 content:
+  bp_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_image:
     weight: 0
     label: hidden

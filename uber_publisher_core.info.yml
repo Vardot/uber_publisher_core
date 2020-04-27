@@ -38,3 +38,5 @@ dependencies:
   - views
   - views_exclude_previous
   - vmi
+  - media_library_edit
+  - allowed_formats

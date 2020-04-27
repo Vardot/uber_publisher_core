@@ -3,15 +3,15 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - media.type.tweet
-    - paragraphs.paragraphs_type.twitter
-id: paragraph.twitter.field_image
+    - media.type.image
+    - paragraphs.paragraphs_type.image
+id: paragraph.image.field_image
 field_name: field_image
 entity_type: paragraph
-bundle: twitter
-label: Twitter
+bundle: image
+label: Image
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -19,7 +19,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      tweet: tweet
+      image: image
     sort:
       field: _none
     auto_create: false

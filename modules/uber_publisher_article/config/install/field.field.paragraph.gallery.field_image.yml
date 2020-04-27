@@ -3,15 +3,15 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_image
-    - media.type.pinterest
-    - paragraphs.paragraphs_type.pinterest
-id: paragraph.pinterest.field_image
+    - media.type.gallery
+    - paragraphs.paragraphs_type.gallery
+id: paragraph.gallery.field_image
 field_name: field_image
 entity_type: paragraph
-bundle: pinterest
-label: Pinterest
+bundle: gallery
+label: 'Media Gallery'
 description: ''
-required: false
+required: true
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -19,7 +19,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      pinterest: pinterest
+      gallery: gallery
     sort:
       field: _none
     auto_create: false
