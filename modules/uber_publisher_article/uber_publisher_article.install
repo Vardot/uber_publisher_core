@@ -13,7 +13,7 @@ function uber_publisher_article_install() {
   $config_factory = \Drupal::configFactory();
   $config = $config_factory->getEditable('workflows.workflow.varbase_basic_workflow');
   $config_array = $config->get();
-  $config_array['type_settings']['entity_types']['node'][] = 'rticle';
+  $config_array['type_settings']['entity_types']['node'][] = 'article';
   $config->set('type_settings', $config_array['type_settings']);
   $config->save();
 }
