@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the uber_publisher_article module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function uber_publisher_article_install() {
+  // Add opinion_article_listing_per_user view to Author page.
+  $config_factory = \Drupal::configFactory();
+  $config = $config_factory->getEditable('workflows.workflow.varbase_basic_workflow');
+  $config_array = $config->get();
+  $config_array['type_settings']['entity_types']['node'][] = 'rticle';
+  $config->set('type_settings', $config_array['type_settings']);
+  $config->save();
+}
