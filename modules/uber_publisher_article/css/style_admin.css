@@ -1,0 +1,127 @@
+/* Style for embed paragraph */
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.paragraph-top {
+  width: 35%;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: unset;
+  justify-content: flex-end;
+  align-items: stretch;
+}
+
+.field--widget-paragraphs-previewer .paragraph, .field--widget-paragraphs-previewer .layout {
+  width: 85%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.paragraph-top .paragraph-type {
+  display: flex;
+  align-items: center;
+  padding-right: 30px
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper .entities-list {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper {
+  display: block;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.media-library-selection {
+  display: flex;
+  flex-direction: row;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper.opened .js-form-wrapper.form-wrapper.paragraph-top {
+  margin-top: 15px;
+  width: 100%;
+  text-align: right;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper.opened {
+  flex-direction: column-reverse;
+  align-items: normal;
+}
+
+.field--type-text-long.field--name-bp-text.paragraphs-content.js-form-wrapper .js-form-type-textarea {
+  margin-bottom: 0;
+}
+
+.field--name-field-lp-paragraphs.field--widget-paragraphs-previewer .tabledrag-toggle-weight-wrapper, .field-multiple-table.draggable-table thead {
+  display: none;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image img {
+  height: 150px;
+  width: 150px;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-media .video-player-icon img {
+  height: 150px;
+  width: 150px;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .media--view-mode-field-preview {
+  display: flex;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .field--name-name {
+  padding-left: 15px;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .gallery-thumbnail .field--name-thumbnail {
+  height: 142px !important;
+}
+
+.paragraphs-dropdown-actions input.button {
+  padding: 15px 23px;
+  text-align: left;
+  line-height: 18px;
+  width: 100%;
+  text-decoration: none;
+  font-size: 1rem;
+  background: transparent;
+  margin: 0 0 1rem 0;
+}
+
+.paragraphs-dropdown-actions input.button:hover {
+  background: #d4d4d8;
+  color: #222330;
+}
+
+.paragraphs-dropdown-actions input.button:last-child {
+  margin: 0;
+}
+
+.media-library-edit__link:hover {
+  color: transparent;
+}
+
+.image-preview__img-wrapper {
+  padding-bottom: 23px;
+}
+
+.focal-point-preview-link {
+  margin-top: 15px;
+}
+
+.field--widget-paragraphs-previewer .layout {
+  width: 100%;
+}
+
+.media--type-remote-video.media--view-mode-field-preview {
+  display: flex;
+}
+
+.media--type-remote-video.media--view-mode-field-preview .field--name-name {
+  padding-left: 15px;
+}

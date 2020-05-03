@@ -73,9 +73,11 @@ content:
             classes: {  }
 hidden:
   field_comments: true
+  field_lp_paragraphs: true
   field_meta_tags: true
   field_section: true
   field_tags: true
   field_yoast_seo: true
   langcode: true
   links: true
+  search_api_excerpt: true

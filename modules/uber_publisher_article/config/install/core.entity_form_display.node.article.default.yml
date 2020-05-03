@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.field_yoast_seo
     - node.type.article
+    - workflows.workflow.varbase_basic_workflow
   module:
     - advanced_text_formatter
     - autocomplete_deluxe
@@ -19,6 +20,7 @@ dependencies:
     - length_indicator
     - maxlength
     - media_library
+    - media_library_edit
     - metatag
     - paragraphs_features
     - paragraphs_previewer
@@ -33,6 +35,8 @@ third_party_settings:
         - title
         - field_media
         - field_tags
+        - field_lp_paragraphs
+        - field_yoast_seo
       parent_name: ''
       weight: 0
       format_type: fieldset
@@ -44,20 +48,6 @@ third_party_settings:
         formatter: open
         required_fields: true
       label: 'Basic info'
-    group_page_content:
-      children:
-        - field_lp_paragraphs
-      parent_name: ''
-      weight: 1
-      format_type: fieldset
-      region: content
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        formatter: closed
-        required_fields: true
-      label: 'Page content'
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -76,7 +66,7 @@ content:
     type: comment_default
     region: content
   field_lp_paragraphs:
-    weight: 2
+    weight: 7
     settings:
       title: Component
       title_plural: Components
@@ -106,7 +96,9 @@ content:
         - image
         - remote_video
         - video
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
     type: media_library_widget
     region: content
   field_meta_tags:
@@ -140,7 +132,7 @@ content:
     type: autocomplete_deluxe
     region: content
   field_yoast_seo:
-    weight: 4
+    weight: 8
     settings:
       body: body
     third_party_settings: {  }

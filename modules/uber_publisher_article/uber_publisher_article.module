@@ -5,6 +5,7 @@
  */
 
 use Drupal\entityqueue\Entity\EntitySubqueue;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_entity_insert().
@@ -27,4 +28,31 @@ function uber_publisher_article_taxonomy_term_insert($term) {
     ]);
     $subqueue->save();
   }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function uber_publisher_article_form_alter(&$form, FormStateInterface &$form_state, $form_id) {
+  if (strpos($form_id, 'node') !== FALSE) {
+
+    $form['#attached']['library'][] = 'uber_publisher_article/style_admin';
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function uber_publisher_article_theme($existing, $type, $theme, $path) {
+  return [
+    'paragraphs-actions' => ['base hook' => 'paragraphs_actions'],
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function uber_publisher_article_theme_suggestions_paragraphs_actions(array $variables) {
+  $suggestions[] = 'paragraphs-actions';
+  return $suggestions;
 }

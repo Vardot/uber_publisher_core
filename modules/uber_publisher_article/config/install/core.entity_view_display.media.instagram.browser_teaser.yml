@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.browser_teaser
-    - field.field.media.instagram.field_media_in_library
     - field.field.media.instagram.field_media_instagram
     - image.style.d03_traditional
     - media.type.instagram
@@ -46,7 +45,6 @@ content:
             classes: {  }
 hidden:
   created: true
-  field_media_in_library: true
   field_media_instagram: true
   langcode: true
   search_api_excerpt: true

@@ -7,6 +7,24 @@ dependencies:
   module:
     - ds
     - text
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          main: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      main:
+        - bp_text
 id: paragraph.quote.default
 targetEntityType: paragraph
 bundle: quote

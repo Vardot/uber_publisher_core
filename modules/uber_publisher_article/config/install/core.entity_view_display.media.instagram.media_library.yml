@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
-    - field.field.media.instagram.field_media_in_library
     - field.field.media.instagram.field_media_instagram
     - image.style.medium
     - media.type.instagram
@@ -25,7 +24,6 @@ content:
     region: content
 hidden:
   created: true
-  field_media_in_library: true
   field_media_instagram: true
   langcode: true
   name: true

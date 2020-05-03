@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.instagram.field_media_in_library
     - field.field.media.instagram.field_media_instagram
     - media.type.instagram
   module:
@@ -23,7 +22,6 @@ content:
     region: content
 hidden:
   created: true
-  field_media_in_library: true
   langcode: true
   name: true
   search_api_excerpt: true

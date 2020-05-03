@@ -8,7 +8,7 @@ id: media.instagram.field_media_instagram
 field_name: field_media_instagram
 entity_type: media
 bundle: instagram
-label: 'Instagram url'
+label: Instagram
 description: ''
 required: true
 translatable: true

@@ -23,8 +23,6 @@ third_party_settings:
     unpublish_enable: true
     unpublish_required: false
     unpublish_revision: true
-_core:
-  default_config_hash: kMGOarHUun-EQbfZoePYOu7TUTollaNeU72359xgo-g
 name: Article
 type: article
 description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'

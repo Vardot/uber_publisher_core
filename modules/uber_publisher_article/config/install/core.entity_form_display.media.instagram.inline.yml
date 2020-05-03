@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.inline
-    - field.field.media.instagram.field_media_in_library
     - field.field.media.instagram.field_media_instagram
     - media.type.instagram
 id: media.instagram.inline
@@ -21,7 +20,6 @@ content:
     region: content
 hidden:
   created: true
-  field_media_in_library: true
   langcode: true
   name: true
   path: true

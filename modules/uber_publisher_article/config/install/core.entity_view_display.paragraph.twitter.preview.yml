@@ -18,7 +18,9 @@ bundle: twitter
 mode: preview
 content:
   field_media:
-    weight: 0
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
     label: hidden
     settings:
       view_mode: field_preview
@@ -31,7 +33,5 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    type: entity_reference_entity_view
-    region: content
 hidden:
   search_api_excerpt: true
