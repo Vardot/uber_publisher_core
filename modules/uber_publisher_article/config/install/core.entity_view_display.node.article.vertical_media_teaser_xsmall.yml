@@ -22,6 +22,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           main: div
         outer_wrapper: article
@@ -32,14 +33,15 @@ third_party_settings:
           layout_class: {  }
     regions:
       main:
+        - content_moderation_control
         - field_media
-        - node_title
         - field_section
+        - node_title
         - node_post_date
     fields:
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 3
         label: hidden
         formatter: default
         settings:
@@ -57,10 +59,10 @@ bundle: article
 mode: vertical_media_teaser_xsmall
 content:
   content_moderation_control:
-    weight: -20
+    weight: 0
+    region: main
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_media:
     type: entity_reference_entity_view
     weight: 1
@@ -79,7 +81,7 @@ content:
             classes: {  }
   field_section:
     type: entity_reference_label
-    weight: 3
+    weight: 2
     region: main
     label: hidden
     settings:

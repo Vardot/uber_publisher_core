@@ -4,9 +4,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.horizontal_media_teaser_medium
     - core.entity_view_mode.node.horizontal_media_teaser_small
-    - core.entity_view_mode.node.text_teaser_small
     - core.entity_view_mode.node.tout_medium
+    - core.entity_view_mode.node.vertical_media_teaser_large
     - core.entity_view_mode.node.vertical_media_teaser_medium
+    - core.entity_view_mode.node.vertical_media_teaser_small
     - entityqueue.entity_queue.editor_s_pick
     - entityqueue.entity_queue.promoted_splash_area
     - entityqueue.entity_queue.promoted_splash_area_sections
@@ -15,6 +16,7 @@ dependencies:
     - image.style.d08_traditional
     - node.type.article
     - taxonomy.vocabulary.section
+    - taxonomy.vocabulary.tags
   module:
     - ds
     - entityqueue
@@ -539,6 +541,251 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_media'
+  article_by_tags:
+    display_plugin: block
+    id: article_by_tags
+    display_title: 'Articles by tags'
+    position: 2
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      display_description: ''
+      title: ''
+      defaults:
+        title: false
+        link_display: false
+        link_url: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        style: false
+        row: false
+        filters: false
+        filter_groups: false
+        relationships: false
+        arguments: false
+      block_category: Articles
+      block_description: 'Articles by tags'
+      link_display: '0'
+      link_url: ''
+      use_more: false
+      use_more_always: false
+      use_more_text: ''
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            article: article
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+        views_exclude_previous:
+          id: views_exclude_previous
+          table: node
+          field: views_exclude_previous
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not in'
+          value:
+            node_load: node_load
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          plugin_id: views_exclude_previous
+        field_tags_target_id:
+          id: field_tags_target_id
+          table: node__field_tags
+          field: field_tags_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_tags_target_id_op
+            label: Tags
+            description: ''
+            use_operator: false
+            operator: field_tags_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_tags_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              editor: '0'
+              editor2: '0'
+              content_admin: '0'
+              seo_admin: '0'
+              site_admin: '0'
+              administrator: '0'
+              opinion_writer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'ds_entity:node'
+        options:
+          relationship: none
+          view_mode: horizontal_media_teaser_medium
+          alternating_fieldset:
+            alternating: true
+            allpages: true
+            item_0: vertical_media_teaser_medium
+            item_1: horizontal_media_teaser_medium
+            item_2: horizontal_media_teaser_medium
+            item_3: horizontal_media_teaser_medium
+          grouping_fieldset:
+            group: false
+            group_field: node_field_data|created
+            group_field_function: ''
+          advanced_fieldset:
+            advanced: false
+      relationships:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: node_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: 'Content queue'
+          required: false
+          limit_queue: promoted_splash_area
+          entity_type: node
+          plugin_id: entity_queue
+      arguments: {  }
+      allow:
+        items_per_page: true
+        configure_filters: configure_filters
+        offset: '0'
+        pager: '0'
+        hide_fields: '0'
+        sort_fields: '0'
+        disable_filters: '0'
+        configure_sorts: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:entityqueue.entity_queue.promoted_splash_area'
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_media'
+        - entity_field_info
+        - views_data
   articles_by_section_block:
     display_plugin: block
     id: articles_by_section_block
@@ -548,7 +795,7 @@ display:
       display_extenders:
         metatag_display_extender: {  }
       display_description: ''
-      title: Politics
+      title: ''
       defaults:
         title: false
         link_display: false
@@ -564,11 +811,11 @@ display:
         arguments: false
       block_category: Articles
       block_description: 'Articles by section'
-      link_display: custom_url
-      link_url: politics
-      use_more: true
-      use_more_always: true
-      use_more_text: 'Read more'
+      link_display: '0'
+      link_url: ''
+      use_more: false
+      use_more_always: false
+      use_more_text: ''
       filters:
         status:
           value: '1'
@@ -2883,6 +3130,106 @@ display:
         - 'config:field.storage.node.field_media'
         - entity_field_info
         - views_data
+  latest_articles_block:
+    display_plugin: block
+    id: latest_articles_block
+    display_title: 'Latest Articles Node page'
+    position: 12
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      title: ''
+      defaults:
+        title: false
+        style: false
+        row: false
+      display_description: ''
+      block_description: 'Latest Articles Node page'
+      block_category: Articles
+      style:
+        type: default
+        options:
+          row_class: 'col-md-8 offset-md-2 mb-4'
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'ds_entity:node'
+        options:
+          relationship: none
+          view_mode: vertical_media_teaser_large
+          alternating_fieldset:
+            alternating: false
+            allpages: false
+            item_0: vertical_media_teaser_large
+            item_1: horizontal_media_teaser_small
+            item_2: horizontal_media_teaser_small
+            item_3: horizontal_media_teaser_small
+          grouping_fieldset:
+            group: false
+            group_field: node_field_data|created
+            group_field_function: ''
+          advanced_fieldset:
+            advanced: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_media'
+  latest_articles_homepage:
+    display_plugin: block
+    id: latest_articles_homepage
+    display_title: 'Latest Articles Homepage'
+    position: 12
+    display_options:
+      display_extenders:
+        metatag_display_extender: {  }
+      title: ''
+      defaults:
+        title: false
+        style: false
+        row: false
+      display_description: ''
+      block_description: 'Latest Articles Homepage'
+      block_category: Articles
+      style:
+        type: default
+        options:
+          row_class: 'col-md-8 offset-md-2 mb-4'
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'ds_entity:node'
+        options:
+          relationship: none
+          view_mode: vertical_media_teaser_medium
+          alternating_fieldset:
+            alternating: false
+            allpages: false
+            item_0: vertical_media_teaser_large
+            item_1: horizontal_media_teaser_small
+            item_2: horizontal_media_teaser_small
+            item_3: horizontal_media_teaser_small
+          grouping_fieldset:
+            group: false
+            group_field: node_field_data|created
+            group_field_function: ''
+          advanced_fieldset:
+            advanced: false
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_media'
   most_viewed_articles:
     display_plugin: block
     id: most_viewed_articles
@@ -2911,9 +3258,9 @@ display:
         type: 'ds_entity:node'
         options:
           relationship: none
-          view_mode: text_teaser_small
+          view_mode: vertical_media_teaser_small
           alternating_fieldset:
-            alternating: true
+            alternating: false
             allpages: false
             item_0: tout_medium
             item_1: text_teaser_small
@@ -2927,7 +3274,7 @@ display:
             group_field_function: ''
           advanced_fieldset:
             advanced: false
-      title: 'Most viewed'
+      title: 'Most Popular'
       pager:
         type: some
         options:

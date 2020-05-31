@@ -23,6 +23,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           main: div
         outer_wrapper: article
@@ -33,16 +34,16 @@ third_party_settings:
           layout_class: {  }
     regions:
       main:
+        - content_moderation_control
         - field_media
         - group_teaser_body
-        - node_title
         - field_section
+        - node_title
         - node_post_date
-        - body
     fields:
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 4
         label: hidden
         formatter: default
         settings:
@@ -51,16 +52,15 @@ third_party_settings:
           class: ''
       node_post_date:
         plugin_id: node_post_date
-        weight: 4
+        weight: 5
         label: hidden
         formatter: ds_post_date_short
   field_group:
     group_teaser_body:
       children:
-        - node_title
         - field_section
+        - node_title
         - node_post_date
-        - body
       parent_name: ''
       weight: 2
       format_type: html_element
@@ -74,7 +74,7 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Teaser body'
-      region: hidden
+      region: main
 id: node.article.vertical_media_teaser_medium
 targetEntityType: node
 bundle: article
@@ -82,9 +82,9 @@ mode: vertical_media_teaser_medium
 content:
   content_moderation_control:
     weight: -20
+    region: main
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_media:
     type: entity_reference_entity_view
     weight: 1

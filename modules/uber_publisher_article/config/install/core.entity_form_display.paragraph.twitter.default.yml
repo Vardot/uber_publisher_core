@@ -5,6 +5,7 @@ dependencies:
     - field.field.paragraph.twitter.field_media
     - paragraphs.paragraphs_type.twitter
   module:
+    - entity_browser_entity_form
     - inline_entity_form
 id: paragraph.twitter.default
 targetEntityType: paragraph
@@ -17,12 +18,18 @@ content:
       form_mode: default
       label_singular: ''
       label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
       revision: false
       override_labels: false
       collapsible: false
       collapsed: false
-    third_party_settings: {  }
-    type: inline_entity_form_simple
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings:
+      entity_browser_entity_form:
+        entity_browser_id: _none
+    type: inline_entity_form_complex
     region: content
 hidden:
   created: true

@@ -5,7 +5,15 @@ dependencies:
     - comment.type.article_comments
     - field.storage.comment.comment_body
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    full_html: full_html
+    quote_editor: '0'
+    basic_html: '0'
+    code_html: '0'
+    plain_text: '0'
 id: comment.article_comments.comment_body
 field_name: comment_body
 entity_type: comment
