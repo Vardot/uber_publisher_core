@@ -93,7 +93,6 @@ hidden:
   content_moderation_control: true
   field_comments: true
   field_meta_tags: true
-  : true
   field_section: true
   field_yoast_seo: true
   langcode: true

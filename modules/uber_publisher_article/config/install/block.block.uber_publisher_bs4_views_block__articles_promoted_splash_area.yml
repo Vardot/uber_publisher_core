@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - system
+    - views
+  theme:
+    - uber_publisher_bs4
+id: uber_publisher_bs4_views_block__articles_promoted_splash_area
+theme: uber_publisher_bs4
+region: content
+weight: -11
+provider: null
+plugin: 'views_block:articles-promoted_splash_area'
+settings:
+  id: 'views_block:articles-promoted_splash_area'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

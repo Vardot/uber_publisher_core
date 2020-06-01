@@ -1,0 +1,23 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - views
+  theme:
+    - uber_publisher_bs4
+id: uber_publisher_bs4_views_block__articles_most_viewed_articles
+theme: uber_publisher_bs4
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'views_block:articles-most_viewed_articles'
+settings:
+  id: 'views_block:articles-most_viewed_articles'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }
