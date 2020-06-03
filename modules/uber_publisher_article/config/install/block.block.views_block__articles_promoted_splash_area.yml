@@ -8,9 +8,9 @@ dependencies:
     - system
     - views
   theme:
-    - vartheme
+    - uber_publisher_bs4
 id: views_block__articles_promoted_splash_area
-theme: vartheme
+theme: uber_publisher_bs4
 region: content
 weight: -11
 provider: null

@@ -10,7 +10,7 @@ dependencies:
 id: uber_publisher_bs4_views_block__articles_most_viewed_articles
 theme: uber_publisher_bs4
 region: sidebar_second
-weight: -10
+weight: -7
 provider: null
 plugin: 'views_block:articles-most_viewed_articles'
 settings:
@@ -20,4 +20,5 @@ settings:
   label_display: visible
   views_label: ''
   items_per_page: none
+  exposed: {  }
 visibility: {  }

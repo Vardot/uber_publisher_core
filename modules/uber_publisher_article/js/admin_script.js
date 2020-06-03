@@ -1,6 +1,6 @@
 /**
  * @file
- * Behaviors for the vartheme admin theme.
+ * Behaviors for the admin admin theme.
  */
 
 (function ($, _, Drupal, drupalSettings) {

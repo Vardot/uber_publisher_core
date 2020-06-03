@@ -11,7 +11,7 @@ dependencies:
 id: uber_publisher_bs4_views_block__articles_promoted_splash_area
 theme: uber_publisher_bs4
 region: content
-weight: -11
+weight: -8
 provider: null
 plugin: 'views_block:articles-promoted_splash_area'
 settings:
@@ -21,6 +21,7 @@ settings:
   label_display: visible
   views_label: ''
   items_per_page: none
+  exposed: {  }
 visibility:
   request_path:
     id: request_path

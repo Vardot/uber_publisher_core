@@ -7,9 +7,9 @@ dependencies:
     - block_class
     - views
   theme:
-    - vartheme
+    - uber_publisher_bs4
 id: views_block__articles_most_viewed_articles
-theme: vartheme
+theme: uber_publisher_bs4
 region: sidebar_second
 weight: -10
 provider: null
