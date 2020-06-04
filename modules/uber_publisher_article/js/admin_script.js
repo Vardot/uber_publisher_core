@@ -1,6 +1,6 @@
 /**
  * @file
- * Behaviors for the admin admin theme.
+ * Behaviors for the vartheme admin theme.
  */
 
 (function ($, _, Drupal, drupalSettings) {
@@ -28,7 +28,9 @@
 
       $(window).on('load', function () {
         $('.field--widget-paragraphs-previewer .paragraph-top').each(function (context) {
-          $(this).height($(this).parents('td').height());
+          if ($(this).parent().hasClass('opened') === false) {
+            $(this).height($(this).parents('td').height());
+          }
         });
 
         $('.field--widget-paragraphs-previewer .paragraph-type-add-modal.first-button').parent().addClass('hidden');
@@ -52,4 +54,5 @@
       $('#edit-field-yoast-seo-0-yoast-seo').removeAttr("open");
     }
   };
-})(window.jQuery, window._, window.Drupal, window.drupalSettings);;
+
+})(window.jQuery, window._, window.Drupal, window.drupalSettings);

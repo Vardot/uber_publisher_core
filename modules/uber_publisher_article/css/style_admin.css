@@ -14,16 +14,20 @@
   align-items: stretch;
 }
 
-.field--widget-paragraphs-previewer .paragraph, .field--widget-paragraphs-previewer .layout {
+.field--widget-paragraphs-previewer .paragraph,
+.field--widget-paragraphs-previewer .layout {
   width: 85%;
   padding: 0;
   cursor: pointer;
+  max-height: 150px;
+  height: 150px;
+  overflow: hidden;
 }
 
 .field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.paragraph-top .paragraph-type {
   display: flex;
   align-items: center;
-  padding-right: 30px
+  padding-right: 30px;
 }
 
 .field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper .entities-list {
@@ -56,7 +60,8 @@
   margin-bottom: 0;
 }
 
-.field--name-field-lp-paragraphs.field--widget-paragraphs-previewer .tabledrag-toggle-weight-wrapper, .field-multiple-table.draggable-table thead {
+.field-multiple-table.draggable-table thead,
+.field--name-field-lp-paragraphs.field--widget-paragraphs-previewer .tabledrag-toggle-weight-wrapper {
   display: none;
 }
 
@@ -65,9 +70,22 @@
   width: 150px;
 }
 
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .field--name-field-media-image {
+  min-width: 150px;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-thumbnail img {
+  height: 150px;
+  width: 150px;
+}
+
 .field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-media .video-player-icon img {
   height: 150px;
   width: 150px;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-media .video-player-icon {
+  min-width: 150px;
 }
 
 .field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .media--view-mode-field-preview {
@@ -124,4 +142,12 @@
 
 .media--type-remote-video.media--view-mode-field-preview .field--name-name {
   padding-left: 15px;
+}
+
+.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-media.field--widget-inline-entity-form-complex {
+  width: 100%;
+}
+
+.media--view-mode-field-preview .gallery-thumbnail {
+  min-width: 150px;
 }
