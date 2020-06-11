@@ -5,9 +5,12 @@
   flex-direction: row-reverse;
 }
 
+.field--widget-paragraphs .js-form-wrapper.form-wrapper.paragraphs-add-wrapper {
+  flex-direction: row;
+}
+
 .field--widget-paragraphs .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.paragraph-top {
   width: 35%;
-  padding-left: 15px;
   display: flex;
   flex-direction: unset;
   justify-content: flex-end;
@@ -100,7 +103,7 @@
   height: 142px !important;
 }
 
-.paragraphs-dropdown-actions input.button {
+.paragraphs-dropdown-actions input.button, .form-wrapper .paragraphs-dropdown-actions button.button {
   padding: 15px 23px;
   text-align: left;
   line-height: 18px;
@@ -111,7 +114,7 @@
   margin: 0 0 1rem 0;
 }
 
-.paragraphs-dropdown-actions input.button:hover {
+.paragraphs-dropdown-actions input.button:hover, .form-wrapper .paragraphs-dropdown-actions button.button:hover {
   background: #d4d4d8;
   color: #222330;
 }
