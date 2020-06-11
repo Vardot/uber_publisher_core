@@ -9,7 +9,7 @@
   Drupal.behaviors.varbaseParagraphs = {
     attach: function (context) {
       $(document).ajaxComplete(function (context) {
-        $('.field--widget-paragraphs-previewer .paragraph-top').each(function (context) {
+        $('.field--widget-paragraphs .paragraph-top').each(function (context) {
           if ($(this).parent().find('.paragraphs-subform').length > 0) {
             $(this).parent().addClass('opened');
           } else {
@@ -22,23 +22,23 @@
 
   Drupal.behaviors.varbaseParagraphs = {
     attach: function (context) {
-      $('.field--widget-paragraphs-previewer .paragraph').click(function (context) {
+      $('.field--widget-paragraphs .paragraph').click(function (context) {
         $(this).siblings('.paragraph-top').find('input.paragraphs-icon-button-edit').trigger('mousedown');
       });
 
       $(window).on('load', function () {
-        $('.field--widget-paragraphs-previewer .paragraph-top').each(function (context) {
+        $('.field--widget-paragraphs .paragraph-top').each(function (context) {
           if ($(this).parent().hasClass('opened') === false) {
             $(this).height($(this).parents('td').height());
           }
         });
 
-        $('.field--widget-paragraphs-previewer .paragraph-type-add-modal.first-button').parent().addClass('hidden');
+        $('.field--widget-paragraphs .paragraph-type-add-modal.first-button').parent().addClass('hidden');
 
       });
 
       $(document).ajaxComplete(function (context) {
-        $('.field--widget-paragraphs-previewer .paragraph-top').each(function (context) {
+        $('.field--widget-paragraphs .paragraph-top').each(function (context) {
           if ($(this).parent().find('.paragraphs-subform').length > 0) {
             $(this).parent().addClass('opened');
           } else {

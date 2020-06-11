@@ -1,11 +1,11 @@
 /* Style for embed paragraph */
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.paragraph-top {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.paragraph-top {
   width: 35%;
   padding-left: 15px;
   display: flex;
@@ -14,8 +14,8 @@
   align-items: stretch;
 }
 
-.field--widget-paragraphs-previewer .paragraph,
-.field--widget-paragraphs-previewer .layout {
+.field--widget-paragraphs .paragraph,
+.field--widget-paragraphs .layout {
   width: 85%;
   padding: 0;
   cursor: pointer;
@@ -24,34 +24,34 @@
   overflow: hidden;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.paragraph-top .paragraph-type {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.paragraph-top .paragraph-type {
   display: flex;
   align-items: center;
   padding-right: 30px;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper .entities-list {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper .entities-list {
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper {
   display: block;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.media-library-selection {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .js-form-wrapper.form-wrapper.media-library-selection {
   display: flex;
   flex-direction: row;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper.opened .js-form-wrapper.form-wrapper.paragraph-top {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper.opened .js-form-wrapper.form-wrapper.paragraph-top {
   margin-top: 15px;
   width: 100%;
   text-align: right;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper.opened {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper.opened {
   flex-direction: column-reverse;
   align-items: normal;
 }
@@ -61,42 +61,42 @@
 }
 
 .field-multiple-table.draggable-table thead,
-.field--name-field-lp-paragraphs.field--widget-paragraphs-previewer .tabledrag-toggle-weight-wrapper {
+.field--name-field-lp-paragraphs.field--widget-paragraphs .tabledrag-toggle-weight-wrapper {
   display: none;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image img {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-field-image img {
   height: 150px;
   width: 150px;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .field--name-field-media-image {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-field-image .field--name-field-media-image {
   min-width: 150px;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-thumbnail img {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-thumbnail img {
   height: 150px;
   width: 150px;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-media .video-player-icon img {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-field-media .video-player-icon img {
   height: 150px;
   width: 150px;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-media .video-player-icon {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-field-media .video-player-icon {
   min-width: 150px;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .media--view-mode-field-preview {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-field-image .media--view-mode-field-preview {
   display: flex;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .field--name-name {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-field-image .field--name-name {
   padding-left: 15px;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-image .gallery-thumbnail .field--name-thumbnail {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-field-image .gallery-thumbnail .field--name-thumbnail {
   height: 142px !important;
 }
 
@@ -132,7 +132,7 @@
   margin-top: 15px;
 }
 
-.field--widget-paragraphs-previewer .layout {
+.field--widget-paragraphs .layout {
   width: 100%;
 }
 
@@ -144,7 +144,7 @@
   padding-left: 15px;
 }
 
-.field--widget-paragraphs-previewer .js-form-wrapper.form-wrapper .field--name-field-media.field--widget-inline-entity-form-complex {
+.field--widget-paragraphs .js-form-wrapper.form-wrapper .field--name-field-media.field--widget-inline-entity-form-complex {
   width: 100%;
 }
 
