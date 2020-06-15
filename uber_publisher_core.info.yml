@@ -1,9 +1,8 @@
 name: 'Uber Publisher Core'
 description: 'Provides core components required by other features, which have all main functionality for the Uber Publisher distribution.'
 type: module
-core: 8.x
-version: 8.x-6.x-dev
 package: 'Uber Publisher'
+core_version_requirement: ^8 || ^9
 dependencies:
   - aggregator
   - comment
