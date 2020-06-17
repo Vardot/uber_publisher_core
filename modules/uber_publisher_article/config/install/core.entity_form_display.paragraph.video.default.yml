@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_media
+    - paragraphs.paragraphs_type.video
+  module:
+    - media_library
+    - media_library_edit
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_media:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types:
+        - remote_video
+        - video
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    region: content
+hidden:
+  created: true
+  status: true
