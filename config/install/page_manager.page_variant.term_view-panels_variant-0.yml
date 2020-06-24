@@ -5,6 +5,7 @@ dependencies:
     - page_manager.page.term_view
     - views.view.uber_puplisher_taxonomy_term
   module:
+    - ctools
     - panels
     - views
 id: term_view-panels_variant-0
@@ -19,6 +20,7 @@ variant_settings:
       label_display: '0'
       views_label: ''
       items_per_page: none
+      exposed: {  }
       region: main
       weight: 0
       uuid: 7a437f0e-814b-417d-93b6-ed2304dad479
@@ -49,6 +51,13 @@ variant_settings:
   builder: standard
 page: term_view
 weight: -9
-selection_criteria: {  }
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      section: section
+    negate: true
+    context_mapping:
+      taxonomy_term: taxonomy_term
 selection_logic: and
 static_context: {  }
