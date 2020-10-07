@@ -13,6 +13,7 @@ use Drupal\Core\Form\FormStateInterface;
 function uber_publisher_article_taxonomy_term_insert($term) {
   if ($term->bundle() == 'section') {
     $config = \Drupal::config('uber_publisher_core.settings');
+
     if ($config && $config->get('auto_create_subqueue')) {
       $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
       if (\Drupal::languageManager()->getCurrentLanguage()->getId() != 'en') {
@@ -23,12 +24,18 @@ function uber_publisher_article_taxonomy_term_insert($term) {
         $term_name = $term->getName();
       }
 
-      $subqueue = EntitySubqueue::create([
-        'name' => preg_replace('@[^a-z0-9-]+@', '-', strtolower($term_name)),
-        'title' => $term->getName(),
-        'queue' => 'promoted_splash_area_sections',
-      ]);
-      $subqueue->save();
+      $subqueue_name = preg_replace('@[^a-z0-9-]+@', '_', strtolower($term_name));
+      $subqueue = EntitySubqueue::load($subqueue_name);
+
+      // Create a new subqueue only if there is no subqueue with the same name.
+      if (is_null($subqueue)) {
+        $subqueue = EntitySubqueue::create([
+          'name' => $subqueue_name,
+          'title' => $term->getName(),
+          'queue' => 'promoted_splash_area_sections',
+        ]);
+        $subqueue->save();
+      }
     }
   }
 }
