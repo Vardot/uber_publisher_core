@@ -45,6 +45,17 @@ class UberPublisherCoreSettingsForm extends ConfigFormBase {
       '#description' => t('Please clear cache after save configuration to apply the last update.'),
     ];
 
+    $form['auto_create_subqueue'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('Auto create a subqueue for each term of the Section vocabulary'),
+      '#default_value' => $config->get('auto_create_subqueue'),
+      '#options' => [
+        '1' => t('On'),
+        '0' => t('Off'),
+      ],
+      '#description' => t('This will trigger automatic creation of a subqueue for each term under the <a href="/admin/structure/taxonomy/manage/section/overview">Section</a> vocabulary when the term is created. Set it <em>off</em> to disable automatic creation.')
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -57,6 +68,7 @@ class UberPublisherCoreSettingsForm extends ConfigFormBase {
       // Set the submitted configuration setting.
       ->set('share_buttons_style', $form_state->getValue('share_buttons_style'))
       // You can set multiple configurations at once by making multiple calls to set()
+      ->set('auto_create_subqueue', $form_state->getValue('auto_create_subqueue'))
       ->save();
 
     parent::submitForm($form, $form_state);

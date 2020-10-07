@@ -12,21 +12,24 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function uber_publisher_article_taxonomy_term_insert($term) {
   if ($term->bundle() == 'section') {
-    $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    if (\Drupal::languageManager()->getCurrentLanguage()->getId() != 'en') {
-      $trans = \Drupal::transliteration();
-      $term_name = $trans->transliterate($term->getName(), $langcode);
-    }
-    else {
-      $term_name = $term->getName();
-    }
+    $config = \Drupal::config('uber_publisher_core.settings');
+    if ($config && $config->get('auto_create_subqueue')) {
+      $langcode = \Drupal::languageManager()->getCurrentLanguage()->getId();
+      if (\Drupal::languageManager()->getCurrentLanguage()->getId() != 'en') {
+        $trans = \Drupal::transliteration();
+        $term_name = $trans->transliterate($term->getName(), $langcode);
+      }
+      else {
+        $term_name = $term->getName();
+      }
 
-    $subqueue = EntitySubqueue::create([
-      'name' => preg_replace('@[^a-z0-9-]+@', '-', strtolower($term_name)),
-      'title' => $term->getName(),
-      'queue' => 'promoted_splash_area_sections',
-    ]);
-    $subqueue->save();
+      $subqueue = EntitySubqueue::create([
+        'name' => preg_replace('@[^a-z0-9-]+@', '-', strtolower($term_name)),
+        'title' => $term->getName(),
+        'queue' => 'promoted_splash_area_sections',
+      ]);
+      $subqueue->save();
+    }
   }
 }
 
