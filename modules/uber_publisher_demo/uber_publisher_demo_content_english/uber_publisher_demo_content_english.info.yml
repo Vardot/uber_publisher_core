@@ -1,9 +1,8 @@
 name: 'Uber Publisher Demo Content (English)'
 description: 'Demo content for Uber publisher for English language.'
 type: module
-core: 8.x
-dependencies:
-  - uber_publisher_demo_content
-version: 8.x-6.x-dev
 package: 'Uber Publisher'
+core_version_requirement: ^8 || ^9
+dependencies:
+  - uber_publisher_core:uber_publisher_demo_content
 target_lang: en

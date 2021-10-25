@@ -1,8 +1,7 @@
 name: 'Uber Publisher Breaking News Demo Content (Arabic)'
 description: 'Uber Publisher breaking news demo content for Arabic language.'
 type: module
-core: 8.x
-package: 'Uber Publisher Demo'
-version: 8.x-6.x-dev
+package: 'Uber Publisher'
+core_version_requirement: ^8 || ^9
 dependencies:
-  - uber_publisher_demo_content
+  - uber_publisher_core:uber_publisher_demo_content

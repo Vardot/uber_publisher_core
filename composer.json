@@ -27,10 +27,25 @@
     }
   },
   "require": {
-    "composer/installers": "^1.5.0",
-    "oomphinc/composer-installers-extender": "^1.1.2",
-    "cweagans/composer-patches": "^1.6.4",
-    "drupal/drupal-library-installer-plugin": "^0.3"
+    "composer/installers": "~1.0 || ~2.0",
+    "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/core": "~8.0 || ~9.0",
+    "drupal/varbase_core": "~8.0 || 8.8.x-dev",
+    "drupal/varbase_media": "~7.0 || 8.7.x-dev",
+    "drupal/varbase_seo": "~6.0 || 8.6.x-dev",
+    "drupal/varbase_workflow": "~2.0 || 2.0.x-dev",
+    "drupal/views_exclude_previous": "~1.0",
+    "drupal/linkchecker": "~1.0",
+    "drupal/linked_field": "~1.0",
+    "drupal/sharerich": "~1.0",
+    "drupal/blocktabs": "~1.0",
+    "drupal/fb_instant_articles": "~2.0",
+    "drupal/simple_amp": "~1.0",
+    "lullabot/amp": "~1.0",
+    "drupal/subpathauto": "1.1",
+    "drupal/media_entity_pinterest": "~2.0",
+    "drupal/simple_sitemap_news": "~1.0"
   },
   "extra": {
     "branch-alias": {
@@ -41,6 +56,20 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/subpathauto": {
+        "Issue #2830425: Add option to ignore admin paths":
+        "https://www.drupal.org/files/issues/2020-07-28/2830425-21.patch"
+      },
+      "drupal/fb_instant_articles": {
+        "Issue #2912129: Fix embed YouTube, Twitter & Instagram?":
+        "https://www.drupal.org/files/issues/twitter_instagram_table_picture_transformer-2912129-7.patch"
+      },
+      "drupal/ctools": {
+        "Issue #2657060: Add Configure Filter functionality to block views configuration":
+        "https://www.drupal.org/files/issues/2020-03-30/ctools-exposed-filter-block-config-2657060-111.patch"
+      }
+    }
   }
 }
