@@ -35,6 +35,7 @@
     "drupal/varbase_media": "~7.0 || 8.7.x-dev",
     "drupal/varbase_seo": "~6.0 || 8.6.x-dev",
     "drupal/varbase_workflow": "~2.0 || 2.0.x-dev",
+    "drupal/varbase_youtube_import": "~1.0 || 1.x-dev",
     "drupal/views_exclude_previous": "~1.0",
     "drupal/linkchecker": "~1.0",
     "drupal/linked_field": "~1.0",
