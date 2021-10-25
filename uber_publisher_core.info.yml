@@ -5,7 +5,7 @@ package: 'Uber Publisher'
 core_version_requirement: ^8 || ^9
 dependencies:
   - varbase_core:varbase_core
-  - varbase_admin:varbase_admin
+  - varbase_core:varbase_admin
   - varbase_media:varbase_media
   - varbase_seo:varbase_seo
   - varbase_layout_builder:varbase_layout_builder
