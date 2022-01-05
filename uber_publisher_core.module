@@ -8,28 +8,6 @@
 use Drupal\block\Entity\Block;
 
 /**
- * Implements hook_preprocess().
- */
-function uber_publisher_core_preprocess(&$variables, $hook) {
-  // Sharerich blocks.
-  $sharerich_block = Block::load('vartheme_sharerich_block');
-  if (isset($sharerich_block)) {
-    $sharerich_block_view = \Drupal::entityTypeManager()
-      ->getViewBuilder('block')
-      ->view($sharerich_block);
-
-    if ($sharerich_block_view) {
-      $variables['sharerich_block'] = $sharerich_block_view;
-    }
-
-    $config = \Drupal::config('uber_publisher_core.settings');
-    if ($config) {
-      $variables['share_buttons_style'] = $config->get('share_buttons_style');
-    }
-  }
-}
-
-/**
  * Implements hook_page_attachments().
  */
 function uber_publisher_core_page_attachments(array &$attachments) {
