@@ -57,7 +57,7 @@
     "patches": {
       "drupal/subpathauto": {
         "Issue #2830425: Add option to ignore admin paths":
-        "https://www.drupal.org/files/issues/2020-07-28/2830425-21.patch"
+        "https://www.drupal.org/files/issues/2023-05-01/2830425-44.patch"
       },
       "drupal/fb_instant_articles": {
         "Issue #2912129: Fix embed YouTube, Twitter & Instagram?":
