@@ -19,7 +19,7 @@
   "repositories": {
     "drupal": {
       "type": "composer",
-      "url": "https://packages.drupal.org/8"
+      "url": "https://packages.drupal.org/9"
       },
     "assets": {
       "type": "composer",
@@ -38,10 +38,9 @@
     "drupal/linked_field": "~1.0",
     "drupal/sharerich": "~1.0",
     "drupal/blocktabs": "~1.0",
-    "drupal/fb_instant_articles": "~2.0",
     "drupal/simple_amp": "~1.0",
     "lullabot/amp": "~2.0",
-    "drupal/subpathauto": "1.1",
+    "drupal/subpathauto": "~1.0",
     "drupal/media_entity_pinterest": "~2.0",
     "drupal/simple_sitemap_news": "~1.0"
   },
