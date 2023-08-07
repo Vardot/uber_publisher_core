@@ -15,4 +15,3 @@ dependencies:
   - media_entity_pinterest:media_entity_pinterest
   - drupal:comment
   - drupal:language
-  - fb_instant_articles:fb_instant_articles
