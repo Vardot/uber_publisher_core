@@ -47,7 +47,7 @@
   },
   "extra": {
     "branch-alias": {
-      "7.0.x": "7.0.x-dev"
+      "9.0.x": "9.0.x-dev"
     },
     "installer-types": [
       "bower-asset",
