@@ -62,10 +62,6 @@
       "drupal/fb_instant_articles": {
         "Issue #2912129: Fix embed YouTube, Twitter & Instagram?":
         "https://www.drupal.org/files/issues/twitter_instagram_table_picture_transformer-2912129-7.patch"
-      },
-      "drupal/ctools": {
-        "Issue #2657060: Add Configure Filter functionality to block views configuration":
-        "https://www.drupal.org/files/issues/2020-03-30/ctools-exposed-filter-block-config-2657060-111.patch"
       }
     }
   }
