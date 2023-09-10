@@ -44,40 +44,6 @@
     "drupal/media_entity_pinterest": "~2.0",
     "drupal/simple_sitemap_news": "~1.0"
   },
-  "config": {
-    "bin-dir": "bin/",
-    "secure-http": false,
-    "preferred-install": {
-      "drupal/core": "dist"
-    },
-    "allow-plugins": {
-      "composer/installers": true,
-      "cweagans/composer-patches": true,
-      "oomphinc/composer-installers-extender": true,
-      "drupal/core-composer-scaffold": true,
-      "drupal/core-project-message": true,
-      "dealerdirect/phpcodesniffer-composer-installer": true,
-      "vardot/varbase-updater": true
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "Varbase\\composer\\": "src/composer"
-    }
-  },
-  "scripts": {
-    "pre-install-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-    "pre-update-cmd": ["Varbase\\composer\\ScriptHandler::checkComposerVersion"],
-    "post-install-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
-    ],
-    "post-update-cmd": [
-      "Varbase\\composer\\ScriptHandler::createRequiredFiles",
-      "Varbase\\composer\\ScriptHandler::removeGitDirectories"
-    ],
-    "post-drupal-scaffold-cmd": ["Varbase\\composer\\ScriptHandler::postDrupalScaffoldProcedure"]
-  },
   "extra": {
     "branch-alias": {
       "9.0.x": "9.0.x-dev"
