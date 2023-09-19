@@ -31,7 +31,7 @@
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
     "drupal/core": "~9.5.0 || ~10.1.0",
-    "drupal/varbase_core": "~9.0",
+    "drupal/varbase_core": "~9.0 || ~10.0",
     "drupal/varbase_youtube_import": "~1.0",
     "drupal/views_exclude_previous": "~2.0",
     "drupal/linkchecker": "~2.0",
